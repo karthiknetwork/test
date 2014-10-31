@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>
+            Mayflower Code Browser - Source Code
+        </title>
+        <link rel="stylesheet" type="text/css" href="../js/jquery.sidebar/css/codebrowser/sidebar.css" />
+        <link rel="stylesheet" type="text/css" href="../css/global.css" />
+        <link rel="stylesheet" type="text/css" href="../css/cruisecontrol.css" />
+        <link rel="stylesheet" type="text/css" href="../css/review.css" />
+
+        <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.sidebar/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.sidebar/jquery.sidebar.js"></script>
+        <script type="text/javascript" src="../js/jquery.cluetip/lib/jquery.hoverIntent.js"></script>
+        <script type="text/javascript" src="../js/jquery.cluetip/lib/jquery.bgiframe.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.cluetip/jquery.cluetip.min.js"></script>
+
+        <script type="text/javascript" src="../js/review.js"></script>
+    </head>
+    <body class="codebrowser">
+        <div class="header">
+            <a href="./../index.html">Go back to index</a> |
+            <a href="http://github.com/mayflowergmbh/PHP_CodeBrowser">PHP CodeBrowser</a>
+        </div>
+        <hr/>
+        <div id="review">
+            <div class="filepath">
+                user_guide/database/active_record.html            </div>
+
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="code"><ol class="code"><li id="line_1" class="odd"><span class="lineNumber">&nbsp;&nbsp;1&nbsp;</span>&lt;!DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Transitional//EN"&nbsp;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<a name="line_1"></a></li>
+<li id="line_2" class="even"><span class="lineNumber">&nbsp;&nbsp;2&nbsp;</span>&lt;html&nbsp;xmlns="http://www.w3.org/1999/xhtml"&nbsp;xml:lang="en"&nbsp;lang="en"&gt;<a name="line_2"></a></li>
+<li id="line_3" class="odd"><span class="lineNumber">&nbsp;&nbsp;3&nbsp;</span>&lt;head&gt;<a name="line_3"></a></li>
+<li id="line_4" class="even"><span class="lineNumber">&nbsp;&nbsp;4&nbsp;</span><a name="line_4"></a></li>
+<li id="line_5" class="odd"><span class="lineNumber">&nbsp;&nbsp;5&nbsp;</span>&lt;meta&nbsp;http-equiv="Content-Type"&nbsp;content="text/html;&nbsp;charset=utf-8"&nbsp;/&gt;<a name="line_5"></a></li>
+<li id="line_6" class="even"><span class="lineNumber">&nbsp;&nbsp;6&nbsp;</span>&lt;title&gt;Active&nbsp;Record&nbsp;:&nbsp;CodeIgniter&nbsp;User&nbsp;Guide&lt;/title&gt;<a name="line_6"></a></li>
+<li id="line_7" class="odd"><span class="lineNumber">&nbsp;&nbsp;7&nbsp;</span><a name="line_7"></a></li>
+<li id="line_8" class="even"><span class="lineNumber">&nbsp;&nbsp;8&nbsp;</span>&lt;style&nbsp;type='text/css'&nbsp;media='all'&gt;@import&nbsp;url('../userguide.css');&lt;/style&gt;<a name="line_8"></a></li>
+<li id="line_9" class="odd"><span class="lineNumber">&nbsp;&nbsp;9&nbsp;</span>&lt;link&nbsp;rel='stylesheet'&nbsp;type='text/css'&nbsp;media='all'&nbsp;href='../userguide.css'&nbsp;/&gt;<a name="line_9"></a></li>
+<li id="line_10" class="even"><span class="lineNumber">&nbsp;10&nbsp;</span><a name="line_10"></a></li>
+<li id="line_11" class="odd"><span class="lineNumber">&nbsp;11&nbsp;</span>&lt;script&nbsp;type="text/javascript"&nbsp;src="../nav/nav.js"&gt;&lt;/script&gt;<a name="line_11"></a></li>
+<li id="line_12" class="even"><span class="lineNumber">&nbsp;12&nbsp;</span>&lt;script&nbsp;type="text/javascript"&nbsp;src="../nav/prototype.lite.js"&gt;&lt;/script&gt;<a name="line_12"></a></li>
+<li id="line_13" class="odd"><span class="lineNumber">&nbsp;13&nbsp;</span>&lt;script&nbsp;type="text/javascript"&nbsp;src="../nav/moo.fx.js"&gt;&lt;/script&gt;<a name="line_13"></a></li>
+<li id="line_14" class="even"><span class="lineNumber">&nbsp;14&nbsp;</span>&lt;script&nbsp;type="text/javascript"&nbsp;src="../nav/user_guide_menu.js"&gt;&lt;/script&gt;<a name="line_14"></a></li>
+<li id="line_15" class="odd"><span class="lineNumber">&nbsp;15&nbsp;</span><a name="line_15"></a></li>
+<li id="line_16" class="even"><span class="lineNumber">&nbsp;16&nbsp;</span>&lt;meta&nbsp;http-equiv='expires'&nbsp;content='-1'&nbsp;/&gt;<a name="line_16"></a></li>
+<li id="line_17" class="odd"><span class="lineNumber">&nbsp;17&nbsp;</span>&lt;meta&nbsp;http-equiv=&nbsp;'pragma'&nbsp;content='no-cache'&nbsp;/&gt;<a name="line_17"></a></li>
+<li id="line_18" class="even"><span class="lineNumber">&nbsp;18&nbsp;</span>&lt;meta&nbsp;name='robots'&nbsp;content='all'&nbsp;/&gt;<a name="line_18"></a></li>
+<li id="line_19" class="odd"><span class="lineNumber">&nbsp;19&nbsp;</span>&lt;meta&nbsp;name='author'&nbsp;content='ExpressionEngine&nbsp;Dev&nbsp;Team'&nbsp;/&gt;<a name="line_19"></a></li>
+<li id="line_20" class="even"><span class="lineNumber">&nbsp;20&nbsp;</span>&lt;meta&nbsp;name='description'&nbsp;content='CodeIgniter&nbsp;User&nbsp;Guide'&nbsp;/&gt;<a name="line_20"></a></li>
+<li id="line_21" class="odd"><span class="lineNumber">&nbsp;21&nbsp;</span>&lt;/head&gt;<a name="line_21"></a></li>
+<li id="line_22" class="even"><span class="lineNumber">&nbsp;22&nbsp;</span>&lt;body&gt;<a name="line_22"></a></li>
+<li id="line_23" class="odd"><span class="lineNumber">&nbsp;23&nbsp;</span><a name="line_23"></a></li>
+<li id="line_24" class="even"><span class="lineNumber">&nbsp;24&nbsp;</span>&lt;!--&nbsp;START&nbsp;NAVIGATION&nbsp;--&gt;<a name="line_24"></a></li>
+<li id="line_25" class="odd"><span class="lineNumber">&nbsp;25&nbsp;</span>&lt;div&nbsp;id="nav"&gt;&lt;div&nbsp;id="nav_inner"&gt;&lt;script&nbsp;type="text/javascript"&gt;create_menu('../');&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;<a name="line_25"></a></li>
+<li id="line_26" class="even"><span class="lineNumber">&nbsp;26&nbsp;</span>&lt;div&nbsp;id="nav2"&gt;&lt;a&nbsp;name="top"&gt;&lt;/a&gt;&lt;a&nbsp;href="javascript:void(0);"&nbsp;onclick="myHeight.toggle();"&gt;&lt;img&nbsp;src="../images/nav_toggle_darker.jpg"&nbsp;width="154"&nbsp;height="43"&nbsp;border="0"&nbsp;title="Toggle&nbsp;Table&nbsp;of&nbsp;Contents"&nbsp;alt="Toggle&nbsp;Table&nbsp;of&nbsp;Contents"&nbsp;/&gt;&lt;/a&gt;&lt;/div&gt;<a name="line_26"></a></li>
+<li id="line_27" class="odd"><span class="lineNumber">&nbsp;27&nbsp;</span>&lt;div&nbsp;id="masthead"&gt;<a name="line_27"></a></li>
+<li id="line_28" class="even"><span class="lineNumber">&nbsp;28&nbsp;</span>&lt;table&nbsp;cellpadding="0"&nbsp;cellspacing="0"&nbsp;border="0"&nbsp;style="width:100%"&gt;<a name="line_28"></a></li>
+<li id="line_29" class="odd"><span class="lineNumber">&nbsp;29&nbsp;</span>&lt;tr&gt;<a name="line_29"></a></li>
+<li id="line_30" class="even"><span class="lineNumber">&nbsp;30&nbsp;</span>&lt;td&gt;&lt;h1&gt;CodeIgniter&nbsp;User&nbsp;Guide&nbsp;Version&nbsp;2.1.4&lt;/h1&gt;&lt;/td&gt;<a name="line_30"></a></li>
+<li id="line_31" class="odd"><span class="lineNumber">&nbsp;31&nbsp;</span>&lt;td&nbsp;id="breadcrumb_right"&gt;&lt;a&nbsp;href="../toc.html"&gt;Table&nbsp;of&nbsp;Contents&nbsp;Page&lt;/a&gt;&lt;/td&gt;<a name="line_31"></a></li>
+<li id="line_32" class="even"><span class="lineNumber">&nbsp;32&nbsp;</span>&lt;/tr&gt;<a name="line_32"></a></li>
+<li id="line_33" class="odd"><span class="lineNumber">&nbsp;33&nbsp;</span>&lt;/table&gt;<a name="line_33"></a></li>
+<li id="line_34" class="even"><span class="lineNumber">&nbsp;34&nbsp;</span>&lt;/div&gt;<a name="line_34"></a></li>
+<li id="line_35" class="odd"><span class="lineNumber">&nbsp;35&nbsp;</span>&lt;!--&nbsp;END&nbsp;NAVIGATION&nbsp;--&gt;<a name="line_35"></a></li>
+<li id="line_36" class="even"><span class="lineNumber">&nbsp;36&nbsp;</span><a name="line_36"></a></li>
+<li id="line_37" class="odd"><span class="lineNumber">&nbsp;37&nbsp;</span><a name="line_37"></a></li>
+<li id="line_38" class="even"><span class="lineNumber">&nbsp;38&nbsp;</span>&lt;!--&nbsp;START&nbsp;BREADCRUMB&nbsp;--&gt;<a name="line_38"></a></li>
+<li id="line_39" class="odd"><span class="lineNumber">&nbsp;39&nbsp;</span>&lt;table&nbsp;cellpadding="0"&nbsp;cellspacing="0"&nbsp;border="0"&nbsp;style="width:100%"&gt;<a name="line_39"></a></li>
+<li id="line_40" class="even"><span class="lineNumber">&nbsp;40&nbsp;</span>&lt;tr&gt;<a name="line_40"></a></li>
+<li id="line_41" class="odd"><span class="lineNumber">&nbsp;41&nbsp;</span>&lt;td&nbsp;id="breadcrumb"&gt;<a name="line_41"></a></li>
+<li id="line_42" class="even"><span class="lineNumber">&nbsp;42&nbsp;</span>&lt;a&nbsp;href="http://codeigniter.com/"&gt;CodeIgniter&nbsp;Home&lt;/a&gt;&nbsp;&amp;nbsp;&amp;#8250;&amp;nbsp;<a name="line_42"></a></li>
+<li id="line_43" class="odd"><span class="lineNumber">&nbsp;43&nbsp;</span>&lt;a&nbsp;href="../index.html"&gt;User&nbsp;Guide&nbsp;Home&lt;/a&gt;&nbsp;&amp;nbsp;&amp;#8250;&amp;nbsp;<a name="line_43"></a></li>
+<li id="line_44" class="even"><span class="lineNumber">&nbsp;44&nbsp;</span>&lt;a&nbsp;href="index.html"&gt;Database&nbsp;Library&lt;/a&gt;&nbsp;&amp;nbsp;&amp;#8250;&amp;nbsp;<a name="line_44"></a></li>
+<li id="line_45" class="odd"><span class="lineNumber">&nbsp;45&nbsp;</span>Active&nbsp;Record<a name="line_45"></a></li>
+<li id="line_46" class="even"><span class="lineNumber">&nbsp;46&nbsp;</span>&lt;/td&gt;<a name="line_46"></a></li>
+<li id="line_47" class="odd"><span class="lineNumber">&nbsp;47&nbsp;</span>&lt;td&nbsp;id="searchbox"&gt;&lt;form&nbsp;method="get"&nbsp;action="http://www.google.com/search"&gt;&lt;input&nbsp;type="hidden"&nbsp;name="as_sitesearch"&nbsp;id="as_sitesearch"&nbsp;value="ellislab.com/codeigniter/user-guide/"&nbsp;/&gt;Search&nbsp;User&nbsp;Guide&amp;nbsp;&nbsp;&lt;input&nbsp;type="text"&nbsp;class="input"&nbsp;style="width:200px;"&nbsp;name="q"&nbsp;id="q"&nbsp;size="31"&nbsp;maxlength="255"&nbsp;value=""&nbsp;/&gt;&amp;nbsp;&lt;input&nbsp;type="submit"&nbsp;class="submit"&nbsp;name="sa"&nbsp;value="Go"&nbsp;/&gt;&lt;/form&gt;&lt;/td&gt;<a name="line_47"></a></li>
+<li id="line_48" class="even"><span class="lineNumber">&nbsp;48&nbsp;</span>&lt;/tr&gt;<a name="line_48"></a></li>
+<li id="line_49" class="odd"><span class="lineNumber">&nbsp;49&nbsp;</span>&lt;/table&gt;<a name="line_49"></a></li>
+<li id="line_50" class="even"><span class="lineNumber">&nbsp;50&nbsp;</span>&lt;!--&nbsp;END&nbsp;BREADCRUMB&nbsp;--&gt;<a name="line_50"></a></li>
+<li id="line_51" class="odd"><span class="lineNumber">&nbsp;51&nbsp;</span><a name="line_51"></a></li>
+<li id="line_52" class="even"><span class="lineNumber">&nbsp;52&nbsp;</span>&lt;br&nbsp;clear="all"&nbsp;/&gt;<a name="line_52"></a></li>
+<li id="line_53" class="odd"><span class="lineNumber">&nbsp;53&nbsp;</span><a name="line_53"></a></li>
+<li id="line_54" class="even"><span class="lineNumber">&nbsp;54&nbsp;</span>&lt;!--&nbsp;START&nbsp;CONTENT&nbsp;--&gt;<a name="line_54"></a></li>
+<li id="line_55" class="odd"><span class="lineNumber">&nbsp;55&nbsp;</span>&lt;div&nbsp;id="content"&gt;<a name="line_55"></a></li>
+<li id="line_56" class="even"><span class="lineNumber">&nbsp;56&nbsp;</span><a name="line_56"></a></li>
+<li id="line_57" class="odd"><span class="lineNumber">&nbsp;57&nbsp;</span>&lt;h1&gt;Active&nbsp;Record&nbsp;Class&lt;/h1&gt;<a name="line_57"></a></li>
+<li id="line_58" class="even"><span class="lineNumber">&nbsp;58&nbsp;</span><a name="line_58"></a></li>
+<li id="line_59" class="odd"><span class="lineNumber">&nbsp;59&nbsp;</span>&lt;p&gt;CodeIgniter&nbsp;uses&nbsp;a&nbsp;modified&nbsp;version&nbsp;of&nbsp;the&nbsp;Active&nbsp;Record&nbsp;Database&nbsp;Pattern.<a name="line_59"></a></li>
+<li id="line_60" class="even"><span class="lineNumber">&nbsp;60&nbsp;</span>This&nbsp;pattern&nbsp;allows&nbsp;information&nbsp;to&nbsp;be&nbsp;retrieved,&nbsp;inserted,&nbsp;and&nbsp;updated&nbsp;in&nbsp;your&nbsp;database&nbsp;with&nbsp;minimal&nbsp;scripting.<a name="line_60"></a></li>
+<li id="line_61" class="odd"><span class="lineNumber">&nbsp;61&nbsp;</span>In&nbsp;some&nbsp;cases&nbsp;only&nbsp;one&nbsp;or&nbsp;two&nbsp;lines&nbsp;of&nbsp;code&nbsp;are&nbsp;necessary&nbsp;to&nbsp;perform&nbsp;a&nbsp;database&nbsp;action.<a name="line_61"></a></li>
+<li id="line_62" class="even"><span class="lineNumber">&nbsp;62&nbsp;</span>CodeIgniter&nbsp;does&nbsp;not&nbsp;require&nbsp;that&nbsp;each&nbsp;database&nbsp;table&nbsp;be&nbsp;its&nbsp;own&nbsp;class&nbsp;file.&nbsp;&nbsp;It&nbsp;instead&nbsp;provides&nbsp;a&nbsp;more&nbsp;simplified&nbsp;interface.&lt;/p&gt;<a name="line_62"></a></li>
+<li id="line_63" class="odd"><span class="lineNumber">&nbsp;63&nbsp;</span><a name="line_63"></a></li>
+<li id="line_64" class="even"><span class="lineNumber">&nbsp;64&nbsp;</span>&lt;p&gt;Beyond&nbsp;simplicity,&nbsp;a&nbsp;major&nbsp;benefit&nbsp;to&nbsp;using&nbsp;the&nbsp;Active&nbsp;Record&nbsp;features&nbsp;is&nbsp;that&nbsp;it&nbsp;allows&nbsp;you&nbsp;to&nbsp;create&nbsp;database&nbsp;independent&nbsp;applications,&nbsp;since&nbsp;the&nbsp;query&nbsp;syntax<a name="line_64"></a></li>
+<li id="line_65" class="odd"><span class="lineNumber">&nbsp;65&nbsp;</span>is&nbsp;generated&nbsp;by&nbsp;each&nbsp;database&nbsp;adapter.&nbsp;&nbsp;It&nbsp;also&nbsp;allows&nbsp;for&nbsp;safer&nbsp;queries,&nbsp;since&nbsp;the&nbsp;values&nbsp;are&nbsp;escaped&nbsp;automatically&nbsp;by&nbsp;the&nbsp;system.&lt;/p&gt;<a name="line_65"></a></li>
+<li id="line_66" class="even"><span class="lineNumber">&nbsp;66&nbsp;</span><a name="line_66"></a></li>
+<li id="line_67" class="odd"><span class="lineNumber">&nbsp;67&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;&nbsp;If&nbsp;you&nbsp;intend&nbsp;to&nbsp;write&nbsp;your&nbsp;own&nbsp;queries&nbsp;you&nbsp;can&nbsp;disable&nbsp;this&nbsp;class&nbsp;in&nbsp;your&nbsp;database&nbsp;config&nbsp;file,&nbsp;allowing&nbsp;the&nbsp;core&nbsp;database&nbsp;library&nbsp;and&nbsp;adapter&nbsp;to&nbsp;utilize&nbsp;fewer&nbsp;resources.&lt;br&nbsp;/&gt;&lt;/p&gt;<a name="line_67"></a></li>
+<li id="line_68" class="even"><span class="lineNumber">&nbsp;68&nbsp;</span><a name="line_68"></a></li>
+<li id="line_69" class="odd"><span class="lineNumber">&nbsp;69&nbsp;</span>&lt;ul&gt;<a name="line_69"></a></li>
+<li id="line_70" class="even"><span class="lineNumber">&nbsp;70&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#select"&gt;Selecting&nbsp;Data&lt;/a&gt;&lt;/li&gt;<a name="line_70"></a></li>
+<li id="line_71" class="odd"><span class="lineNumber">&nbsp;71&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#insert"&gt;Inserting&nbsp;Data&lt;/a&gt;&lt;/li&gt;<a name="line_71"></a></li>
+<li id="line_72" class="even"><span class="lineNumber">&nbsp;72&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#update"&gt;Updating&nbsp;Data&lt;/a&gt;&lt;/li&gt;<a name="line_72"></a></li>
+<li id="line_73" class="odd"><span class="lineNumber">&nbsp;73&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#delete"&gt;Deleting&nbsp;Data&lt;/a&gt;&lt;/li&gt;<a name="line_73"></a></li>
+<li id="line_74" class="even"><span class="lineNumber">&nbsp;74&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#chaining"&gt;Method&nbsp;Chaining&lt;/a&gt;&lt;/li&gt;<a name="line_74"></a></li>
+<li id="line_75" class="odd"><span class="lineNumber">&nbsp;75&nbsp;</span>&lt;li&gt;&lt;a&nbsp;href="#caching"&gt;Active&nbsp;Record&nbsp;Caching&lt;/a&gt;&lt;/li&gt;<a name="line_75"></a></li>
+<li id="line_76" class="even"><span class="lineNumber">&nbsp;76&nbsp;</span>&lt;/ul&gt;<a name="line_76"></a></li>
+<li id="line_77" class="odd"><span class="lineNumber">&nbsp;77&nbsp;</span><a name="line_77"></a></li>
+<li id="line_78" class="even"><span class="lineNumber">&nbsp;78&nbsp;</span>&lt;h1&gt;&lt;a&nbsp;name="select"&gt;&amp;nbsp;&lt;/a&gt;Selecting&nbsp;Data&lt;/h1&gt;<a name="line_78"></a></li>
+<li id="line_79" class="odd"><span class="lineNumber">&nbsp;79&nbsp;</span><a name="line_79"></a></li>
+<li id="line_80" class="even"><span class="lineNumber">&nbsp;80&nbsp;</span>&lt;p&gt;The&nbsp;following&nbsp;functions&nbsp;allow&nbsp;you&nbsp;to&nbsp;build&nbsp;SQL&nbsp;&lt;strong&gt;SELECT&lt;/strong&gt;&nbsp;statements.&lt;/p&gt;<a name="line_80"></a></li>
+<li id="line_81" class="odd"><span class="lineNumber">&nbsp;81&nbsp;</span><a name="line_81"></a></li>
+<li id="line_82" class="even"><span class="lineNumber">&nbsp;82&nbsp;</span>&lt;p&gt;&lt;strong&gt;Note:&nbsp;If&nbsp;you&nbsp;are&nbsp;using&nbsp;PHP&nbsp;5&nbsp;you&nbsp;can&nbsp;use&nbsp;method&nbsp;chaining&nbsp;for&nbsp;more&nbsp;compact&nbsp;syntax.&nbsp;This&nbsp;is&nbsp;described&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;page.&lt;/strong&gt;&lt;/p&gt;<a name="line_82"></a></li>
+<li id="line_83" class="odd"><span class="lineNumber">&nbsp;83&nbsp;</span><a name="line_83"></a></li>
+<li id="line_84" class="even"><span class="lineNumber">&nbsp;84&nbsp;</span><a name="line_84"></a></li>
+<li id="line_85" class="odd"><span class="lineNumber">&nbsp;85&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;get();&lt;/h2&gt;<a name="line_85"></a></li>
+<li id="line_86" class="even"><span class="lineNumber">&nbsp;86&nbsp;</span><a name="line_86"></a></li>
+<li id="line_87" class="odd"><span class="lineNumber">&nbsp;87&nbsp;</span>&lt;p&gt;Runs&nbsp;the&nbsp;selection&nbsp;query&nbsp;and&nbsp;returns&nbsp;the&nbsp;result.&nbsp;&nbsp;Can&nbsp;be&nbsp;used&nbsp;by&nbsp;itself&nbsp;to&nbsp;retrieve&nbsp;all&nbsp;records&nbsp;from&nbsp;a&nbsp;table:&lt;/p&gt;<a name="line_87"></a></li>
+<li id="line_88" class="even"><span class="lineNumber">&nbsp;88&nbsp;</span><a name="line_88"></a></li>
+<li id="line_89" class="odd"><span class="lineNumber">&nbsp;89&nbsp;</span>&lt;code&gt;$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('mytable');&lt;br&nbsp;/&gt;<a name="line_89"></a></li>
+<li id="line_90" class="even"><span class="lineNumber">&nbsp;90&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_90"></a></li>
+<li id="line_91" class="odd"><span class="lineNumber">&nbsp;91&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;mytable&lt;/code&gt;<a name="line_91"></a></li>
+<li id="line_92" class="even"><span class="lineNumber">&nbsp;92&nbsp;</span><a name="line_92"></a></li>
+<li id="line_93" class="odd"><span class="lineNumber">&nbsp;93&nbsp;</span>&lt;p&gt;The&nbsp;second&nbsp;and&nbsp;third&nbsp;parameters&nbsp;enable&nbsp;you&nbsp;to&nbsp;set&nbsp;a&nbsp;limit&nbsp;and&nbsp;offset&nbsp;clause:&lt;/p&gt;<a name="line_93"></a></li>
+<li id="line_94" class="even"><span class="lineNumber">&nbsp;94&nbsp;</span><a name="line_94"></a></li>
+<li id="line_95" class="odd"><span class="lineNumber">&nbsp;95&nbsp;</span>&lt;code&gt;$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('mytable',&nbsp;10,&nbsp;20);&lt;br&nbsp;/&gt;<a name="line_95"></a></li>
+<li id="line_96" class="even"><span class="lineNumber">&nbsp;96&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_96"></a></li>
+<li id="line_97" class="odd"><span class="lineNumber">&nbsp;97&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;mytable&nbsp;LIMIT&nbsp;20,&nbsp;10&nbsp;(in&nbsp;MySQL.&nbsp;Other&nbsp;databases&nbsp;have&nbsp;slightly&nbsp;different&nbsp;syntax)&lt;/code&gt;<a name="line_97"></a></li>
+<li id="line_98" class="even"><span class="lineNumber">&nbsp;98&nbsp;</span><a name="line_98"></a></li>
+<li id="line_99" class="odd"><span class="lineNumber">&nbsp;99&nbsp;</span>&lt;p&gt;You'll&nbsp;notice&nbsp;that&nbsp;the&nbsp;above&nbsp;function&nbsp;is&nbsp;assigned&nbsp;to&nbsp;a&nbsp;variable&nbsp;named&nbsp;&lt;kbd&gt;$query&lt;/kbd&gt;,&nbsp;which&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;show&nbsp;the&nbsp;results:&lt;/p&gt;<a name="line_99"></a></li>
+<li id="line_100" class="even"><span class="lineNumber">100&nbsp;</span><a name="line_100"></a></li>
+<li id="line_101" class="odd"><span class="lineNumber">101&nbsp;</span>&lt;code&gt;$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('mytable');&lt;br&nbsp;/&gt;<a name="line_101"></a></li>
+<li id="line_102" class="even"><span class="lineNumber">102&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_102"></a></li>
+<li id="line_103" class="odd"><span class="lineNumber">103&nbsp;</span>foreach&nbsp;($query-&gt;result()&nbsp;as&nbsp;$row)&lt;br&nbsp;/&gt;<a name="line_103"></a></li>
+<li id="line_104" class="even"><span class="lineNumber">104&nbsp;</span>{&lt;br&nbsp;/&gt;<a name="line_104"></a></li>
+<li id="line_105" class="odd"><span class="lineNumber">105&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;echo&nbsp;$row-&gt;title;&lt;br&nbsp;/&gt;<a name="line_105"></a></li>
+<li id="line_106" class="even"><span class="lineNumber">106&nbsp;</span>}&lt;/code&gt;<a name="line_106"></a></li>
+<li id="line_107" class="odd"><span class="lineNumber">107&nbsp;</span><a name="line_107"></a></li>
+<li id="line_108" class="even"><span class="lineNumber">108&nbsp;</span>&lt;p&gt;Please&nbsp;visit&nbsp;the&nbsp;&lt;a&nbsp;href="results.html"&gt;result&nbsp;functions&lt;/a&gt;&nbsp;page&nbsp;for&nbsp;a&nbsp;full&nbsp;discussion&nbsp;regarding&nbsp;result&nbsp;generation.&lt;/p&gt;<a name="line_108"></a></li>
+<li id="line_109" class="odd"><span class="lineNumber">109&nbsp;</span><a name="line_109"></a></li>
+<li id="line_110" class="even"><span class="lineNumber">110&nbsp;</span><a name="line_110"></a></li>
+<li id="line_111" class="odd"><span class="lineNumber">111&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;get_where();&lt;/h2&gt;<a name="line_111"></a></li>
+<li id="line_112" class="even"><span class="lineNumber">112&nbsp;</span><a name="line_112"></a></li>
+<li id="line_113" class="odd"><span class="lineNumber">113&nbsp;</span>&lt;p&gt;Identical&nbsp;to&nbsp;the&nbsp;above&nbsp;function&nbsp;except&nbsp;that&nbsp;it&nbsp;permits&nbsp;you&nbsp;to&nbsp;add&nbsp;a&nbsp;"where"&nbsp;clause&nbsp;in&nbsp;the&nbsp;second&nbsp;parameter,<a name="line_113"></a></li>
+<li id="line_114" class="even"><span class="lineNumber">114&nbsp;</span>instead&nbsp;of&nbsp;using&nbsp;the&nbsp;db-&gt;where()&nbsp;function:&lt;/p&gt;<a name="line_114"></a></li>
+<li id="line_115" class="odd"><span class="lineNumber">115&nbsp;</span><a name="line_115"></a></li>
+<li id="line_116" class="even"><span class="lineNumber">116&nbsp;</span>&lt;code&gt;$query&nbsp;=&nbsp;$this-&gt;db-&gt;get_where('mytable',&nbsp;array('id'&nbsp;=&gt;&nbsp;$id),&nbsp;$limit,&nbsp;$offset);&lt;/code&gt;<a name="line_116"></a></li>
+<li id="line_117" class="odd"><span class="lineNumber">117&nbsp;</span><a name="line_117"></a></li>
+<li id="line_118" class="even"><span class="lineNumber">118&nbsp;</span>&lt;p&gt;Please&nbsp;read&nbsp;the&nbsp;about&nbsp;the&nbsp;where&nbsp;function&nbsp;below&nbsp;for&nbsp;more&nbsp;information.&lt;/p&gt;<a name="line_118"></a></li>
+<li id="line_119" class="odd"><span class="lineNumber">119&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;get_where()&nbsp;was&nbsp;formerly&nbsp;known&nbsp;as&nbsp;getwhere(),&nbsp;which&nbsp;has&nbsp;been&nbsp;removed&lt;/p&gt;<a name="line_119"></a></li>
+<li id="line_120" class="even"><span class="lineNumber">120&nbsp;</span><a name="line_120"></a></li>
+<li id="line_121" class="odd"><span class="lineNumber">121&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;select();&lt;/h2&gt;<a name="line_121"></a></li>
+<li id="line_122" class="even"><span class="lineNumber">122&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;write&nbsp;the&nbsp;SELECT&nbsp;portion&nbsp;of&nbsp;your&nbsp;query:&lt;/p&gt;<a name="line_122"></a></li>
+<li id="line_123" class="odd"><span class="lineNumber">123&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_123"></a></li>
+<li id="line_124" class="even"><span class="lineNumber">124&nbsp;</span>$this-&gt;db-&gt;select('title,&nbsp;content,&nbsp;date');&lt;br&nbsp;/&gt;<a name="line_124"></a></li>
+<li id="line_125" class="odd"><span class="lineNumber">125&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_125"></a></li>
+<li id="line_126" class="even"><span class="lineNumber">126&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('mytable');&lt;br&nbsp;/&gt;<a name="line_126"></a></li>
+<li id="line_127" class="odd"><span class="lineNumber">127&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_127"></a></li>
+<li id="line_128" class="even"><span class="lineNumber">128&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;title,&nbsp;content,&nbsp;date&nbsp;FROM&nbsp;mytable&lt;/code&gt;&lt;/p&gt;<a name="line_128"></a></li>
+<li id="line_129" class="odd"><span class="lineNumber">129&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;If&nbsp;you&nbsp;are&nbsp;selecting&nbsp;all&nbsp;(*)&nbsp;from&nbsp;a&nbsp;table&nbsp;you&nbsp;do&nbsp;not&nbsp;need&nbsp;to&nbsp;use&nbsp;this&nbsp;function.&nbsp;&nbsp;When&nbsp;omitted,&nbsp;CodeIgniter&nbsp;assumes&nbsp;you&nbsp;wish&nbsp;to&nbsp;SELECT&nbsp;*&lt;/p&gt;<a name="line_129"></a></li>
+<li id="line_130" class="even"><span class="lineNumber">130&nbsp;</span><a name="line_130"></a></li>
+<li id="line_131" class="odd"><span class="lineNumber">131&nbsp;</span>&lt;p&gt;$this-&amp;gt;db-&amp;gt;select()&nbsp;accepts&nbsp;an&nbsp;optional&nbsp;second&nbsp;parameter.&nbsp;If&nbsp;you&nbsp;set&nbsp;it&nbsp;to&nbsp;FALSE,&nbsp;CodeIgniter&nbsp;will&nbsp;not&nbsp;try&nbsp;to&nbsp;protect&nbsp;your&nbsp;field&nbsp;or&nbsp;table&nbsp;names&nbsp;with&nbsp;backticks.&nbsp;This&nbsp;is&nbsp;useful&nbsp;if&nbsp;you&nbsp;need&nbsp;a&nbsp;compound&nbsp;select&nbsp;statement.&lt;/p&gt;<a name="line_131"></a></li>
+<li id="line_132" class="even"><span class="lineNumber">132&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&amp;gt;db-&amp;gt;select('(SELECT&nbsp;SUM(payments.amount)&nbsp;FROM&nbsp;payments&nbsp;WHERE&nbsp;payments.invoice_id=4')&nbsp;AS&nbsp;amount_paid',&nbsp;FALSE);&nbsp;&lt;br&nbsp;/&gt;<a name="line_132"></a></li>
+<li id="line_133" class="odd"><span class="lineNumber">133&nbsp;</span>$query&nbsp;=&nbsp;$this-&amp;gt;db-&amp;gt;get('mytable');&lt;br&nbsp;/&gt;<a name="line_133"></a></li>
+<li id="line_134" class="even"><span class="lineNumber">134&nbsp;</span>&lt;/code&gt;&lt;/p&gt;<a name="line_134"></a></li>
+<li id="line_135" class="odd"><span class="lineNumber">135&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;select_max();&lt;/h2&gt;<a name="line_135"></a></li>
+<li id="line_136" class="even"><span class="lineNumber">136&nbsp;</span>&lt;p&gt;Writes&nbsp;a&nbsp;"SELECT&nbsp;MAX(field)"&nbsp;portion&nbsp;for&nbsp;your&nbsp;query.&nbsp;You&nbsp;can&nbsp;optionally&nbsp;include&nbsp;a&nbsp;second&nbsp;parameter&nbsp;to&nbsp;rename&nbsp;the&nbsp;resulting&nbsp;field.&lt;/p&gt;<a name="line_136"></a></li>
+<li id="line_137" class="odd"><span class="lineNumber">137&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_137"></a></li>
+<li id="line_138" class="even"><span class="lineNumber">138&nbsp;</span>$this-&gt;db-&gt;select_max('age');&lt;br&nbsp;/&gt;<a name="line_138"></a></li>
+<li id="line_139" class="odd"><span class="lineNumber">139&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('members');&lt;br&nbsp;/&gt;<a name="line_139"></a></li>
+<li id="line_140" class="even"><span class="lineNumber">140&nbsp;</span><a name="line_140"></a></li>
+<li id="line_141" class="odd"><span class="lineNumber">141&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;MAX(age)&nbsp;as&nbsp;age&nbsp;FROM&nbsp;members&lt;br&nbsp;/&gt;<a name="line_141"></a></li>
+<li id="line_142" class="even"><span class="lineNumber">142&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_142"></a></li>
+<li id="line_143" class="odd"><span class="lineNumber">143&nbsp;</span>$this-&amp;gt;db-&amp;gt;select_max('age',&nbsp;'member_age');&lt;br&nbsp;/&gt;<a name="line_143"></a></li>
+<li id="line_144" class="even"><span class="lineNumber">144&nbsp;</span>$query&nbsp;=&nbsp;$this-&amp;gt;db-&amp;gt;get('members');&lt;br&nbsp;/&gt;<a name="line_144"></a></li>
+<li id="line_145" class="odd"><span class="lineNumber">145&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;MAX(age)&nbsp;as&nbsp;member_age&nbsp;FROM&nbsp;members&lt;/code&gt;&lt;/p&gt;<a name="line_145"></a></li>
+<li id="line_146" class="even"><span class="lineNumber">146&nbsp;</span><a name="line_146"></a></li>
+<li id="line_147" class="odd"><span class="lineNumber">147&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;select_min();&lt;/h2&gt;<a name="line_147"></a></li>
+<li id="line_148" class="even"><span class="lineNumber">148&nbsp;</span>&lt;p&gt;Writes&nbsp;a&nbsp;"SELECT&nbsp;MIN(field)"&nbsp;portion&nbsp;for&nbsp;your&nbsp;query.&nbsp;As&nbsp;with&nbsp;&lt;dfn&gt;select_max()&lt;/dfn&gt;,&nbsp;You&nbsp;can&nbsp;optionally&nbsp;include&nbsp;a&nbsp;second&nbsp;parameter&nbsp;to&nbsp;rename&nbsp;the&nbsp;resulting&nbsp;field.&lt;/p&gt;<a name="line_148"></a></li>
+<li id="line_149" class="odd"><span class="lineNumber">149&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_149"></a></li>
+<li id="line_150" class="even"><span class="lineNumber">150&nbsp;</span>$this-&gt;db-&gt;select_min('age');&lt;br&nbsp;/&gt;<a name="line_150"></a></li>
+<li id="line_151" class="odd"><span class="lineNumber">151&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('members');&lt;br&nbsp;/&gt;<a name="line_151"></a></li>
+<li id="line_152" class="even"><span class="lineNumber">152&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;MIN(age)&nbsp;as&nbsp;age&nbsp;FROM&nbsp;members&lt;/code&gt;&lt;/p&gt;<a name="line_152"></a></li>
+<li id="line_153" class="odd"><span class="lineNumber">153&nbsp;</span><a name="line_153"></a></li>
+<li id="line_154" class="even"><span class="lineNumber">154&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;select_avg();&lt;/h2&gt;<a name="line_154"></a></li>
+<li id="line_155" class="odd"><span class="lineNumber">155&nbsp;</span>&lt;p&gt;Writes&nbsp;a&nbsp;"SELECT&nbsp;AVG(field)"&nbsp;portion&nbsp;for&nbsp;your&nbsp;query.&nbsp;As&nbsp;with&nbsp;&lt;dfn&gt;select_max()&lt;/dfn&gt;,&nbsp;You&nbsp;can&nbsp;optionally&nbsp;include&nbsp;a&nbsp;second&nbsp;parameter&nbsp;to&nbsp;rename&nbsp;the&nbsp;resulting&nbsp;field.&lt;/p&gt;<a name="line_155"></a></li>
+<li id="line_156" class="even"><span class="lineNumber">156&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_156"></a></li>
+<li id="line_157" class="odd"><span class="lineNumber">157&nbsp;</span>$this-&gt;db-&gt;select_avg('age');&lt;br&nbsp;/&gt;<a name="line_157"></a></li>
+<li id="line_158" class="even"><span class="lineNumber">158&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('members');&lt;br&nbsp;/&gt;<a name="line_158"></a></li>
+<li id="line_159" class="odd"><span class="lineNumber">159&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;AVG(age)&nbsp;as&nbsp;age&nbsp;FROM&nbsp;members&lt;/code&gt;&lt;/p&gt;<a name="line_159"></a></li>
+<li id="line_160" class="even"><span class="lineNumber">160&nbsp;</span><a name="line_160"></a></li>
+<li id="line_161" class="odd"><span class="lineNumber">161&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;select_sum();&lt;/h2&gt;<a name="line_161"></a></li>
+<li id="line_162" class="even"><span class="lineNumber">162&nbsp;</span>&lt;p&gt;Writes&nbsp;a&nbsp;"SELECT&nbsp;SUM(field)"&nbsp;portion&nbsp;for&nbsp;your&nbsp;query.&nbsp;As&nbsp;with&nbsp;&lt;dfn&gt;select_max()&lt;/dfn&gt;,&nbsp;You&nbsp;can&nbsp;optionally&nbsp;include&nbsp;a&nbsp;second&nbsp;parameter&nbsp;to&nbsp;rename&nbsp;the&nbsp;resulting&nbsp;field.&lt;/p&gt;<a name="line_162"></a></li>
+<li id="line_163" class="odd"><span class="lineNumber">163&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_163"></a></li>
+<li id="line_164" class="even"><span class="lineNumber">164&nbsp;</span>$this-&gt;db-&gt;select_sum('age');&lt;br&nbsp;/&gt;<a name="line_164"></a></li>
+<li id="line_165" class="odd"><span class="lineNumber">165&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get('members');&lt;br&nbsp;/&gt;<a name="line_165"></a></li>
+<li id="line_166" class="even"><span class="lineNumber">166&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;SUM(age)&nbsp;as&nbsp;age&nbsp;FROM&nbsp;members&lt;/code&gt;&lt;/p&gt;<a name="line_166"></a></li>
+<li id="line_167" class="odd"><span class="lineNumber">167&nbsp;</span><a name="line_167"></a></li>
+<li id="line_168" class="even"><span class="lineNumber">168&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;from();&lt;/h2&gt;<a name="line_168"></a></li>
+<li id="line_169" class="odd"><span class="lineNumber">169&nbsp;</span><a name="line_169"></a></li>
+<li id="line_170" class="even"><span class="lineNumber">170&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;write&nbsp;the&nbsp;FROM&nbsp;portion&nbsp;of&nbsp;your&nbsp;query:&lt;/p&gt;<a name="line_170"></a></li>
+<li id="line_171" class="odd"><span class="lineNumber">171&nbsp;</span><a name="line_171"></a></li>
+<li id="line_172" class="even"><span class="lineNumber">172&nbsp;</span>&lt;code&gt;<a name="line_172"></a></li>
+<li id="line_173" class="odd"><span class="lineNumber">173&nbsp;</span>$this-&gt;db-&gt;select('title,&nbsp;content,&nbsp;date');&lt;br&nbsp;/&gt;<a name="line_173"></a></li>
+<li id="line_174" class="even"><span class="lineNumber">174&nbsp;</span>$this-&gt;db-&gt;from('mytable');&lt;br&nbsp;/&gt;<a name="line_174"></a></li>
+<li id="line_175" class="odd"><span class="lineNumber">175&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_175"></a></li>
+<li id="line_176" class="even"><span class="lineNumber">176&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get();&lt;br&nbsp;/&gt;<a name="line_176"></a></li>
+<li id="line_177" class="odd"><span class="lineNumber">177&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_177"></a></li>
+<li id="line_178" class="even"><span class="lineNumber">178&nbsp;</span>//&nbsp;Produces:&nbsp;SELECT&nbsp;title,&nbsp;content,&nbsp;date&nbsp;FROM&nbsp;mytable&lt;/code&gt;<a name="line_178"></a></li>
+<li id="line_179" class="odd"><span class="lineNumber">179&nbsp;</span><a name="line_179"></a></li>
+<li id="line_180" class="even"><span class="lineNumber">180&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;As&nbsp;shown&nbsp;earlier,&nbsp;the&nbsp;FROM&nbsp;portion&nbsp;of&nbsp;your&nbsp;query&nbsp;can&nbsp;be&nbsp;specified&nbsp;in&nbsp;the&nbsp;&lt;dfn&gt;$this-&gt;db-&gt;get()&lt;/dfn&gt;&nbsp;function,&nbsp;so&nbsp;use&nbsp;whichever&nbsp;method<a name="line_180"></a></li>
+<li id="line_181" class="odd"><span class="lineNumber">181&nbsp;</span>you&nbsp;prefer.&lt;/p&gt;<a name="line_181"></a></li>
+<li id="line_182" class="even"><span class="lineNumber">182&nbsp;</span><a name="line_182"></a></li>
+<li id="line_183" class="odd"><span class="lineNumber">183&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;join();&lt;/h2&gt;<a name="line_183"></a></li>
+<li id="line_184" class="even"><span class="lineNumber">184&nbsp;</span><a name="line_184"></a></li>
+<li id="line_185" class="odd"><span class="lineNumber">185&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;write&nbsp;the&nbsp;JOIN&nbsp;portion&nbsp;of&nbsp;your&nbsp;query:&lt;/p&gt;<a name="line_185"></a></li>
+<li id="line_186" class="even"><span class="lineNumber">186&nbsp;</span><a name="line_186"></a></li>
+<li id="line_187" class="odd"><span class="lineNumber">187&nbsp;</span>&lt;code&gt;<a name="line_187"></a></li>
+<li id="line_188" class="even"><span class="lineNumber">188&nbsp;</span>$this-&gt;db-&gt;select('*');&lt;br&nbsp;/&gt;<a name="line_188"></a></li>
+<li id="line_189" class="odd"><span class="lineNumber">189&nbsp;</span>$this-&gt;db-&gt;from('blogs');&lt;br&nbsp;/&gt;<a name="line_189"></a></li>
+<li id="line_190" class="even"><span class="lineNumber">190&nbsp;</span>$this-&gt;db-&gt;join('comments',&nbsp;'comments.id&nbsp;=&nbsp;blogs.id');&lt;br&nbsp;/&gt;<a name="line_190"></a></li>
+<li id="line_191" class="odd"><span class="lineNumber">191&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_191"></a></li>
+<li id="line_192" class="even"><span class="lineNumber">192&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get();&lt;br&nbsp;/&gt;<a name="line_192"></a></li>
+<li id="line_193" class="odd"><span class="lineNumber">193&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_193"></a></li>
+<li id="line_194" class="even"><span class="lineNumber">194&nbsp;</span>//&nbsp;Produces:&nbsp;&lt;br&nbsp;/&gt;<a name="line_194"></a></li>
+<li id="line_195" class="odd"><span class="lineNumber">195&nbsp;</span>//&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;blogs&lt;br&nbsp;/&gt;<a name="line_195"></a></li>
+<li id="line_196" class="even"><span class="lineNumber">196&nbsp;</span>//&nbsp;JOIN&nbsp;comments&nbsp;ON&nbsp;comments.id&nbsp;=&nbsp;blogs.id&lt;br&nbsp;/&gt;<a name="line_196"></a></li>
+<li id="line_197" class="odd"><span class="lineNumber">197&nbsp;</span>&lt;/code&gt;<a name="line_197"></a></li>
+<li id="line_198" class="even"><span class="lineNumber">198&nbsp;</span><a name="line_198"></a></li>
+<li id="line_199" class="odd"><span class="lineNumber">199&nbsp;</span>&lt;p&gt;Multiple&nbsp;function&nbsp;calls&nbsp;can&nbsp;be&nbsp;made&nbsp;if&nbsp;you&nbsp;need&nbsp;several&nbsp;joins&nbsp;in&nbsp;one&nbsp;query.&lt;/p&gt;<a name="line_199"></a></li>
+<li id="line_200" class="even"><span class="lineNumber">200&nbsp;</span><a name="line_200"></a></li>
+<li id="line_201" class="odd"><span class="lineNumber">201&nbsp;</span>&lt;p&gt;If&nbsp;you&nbsp;need&nbsp;a&nbsp;specific&nbsp;type&nbsp;of&nbsp;JOIN&nbsp;you&nbsp;can&nbsp;specify&nbsp;it&nbsp;via&nbsp;the&nbsp;third&nbsp;parameter&nbsp;of&nbsp;the&nbsp;function.<a name="line_201"></a></li>
+<li id="line_202" class="even"><span class="lineNumber">202&nbsp;</span>Options&nbsp;are:&nbsp;left,&nbsp;right,&nbsp;outer,&nbsp;inner,&nbsp;left&nbsp;outer,&nbsp;and&nbsp;right&nbsp;outer.&lt;/p&gt;<a name="line_202"></a></li>
+<li id="line_203" class="odd"><span class="lineNumber">203&nbsp;</span><a name="line_203"></a></li>
+<li id="line_204" class="even"><span class="lineNumber">204&nbsp;</span>&lt;code&gt;<a name="line_204"></a></li>
+<li id="line_205" class="odd"><span class="lineNumber">205&nbsp;</span>$this-&gt;db-&gt;join('comments',&nbsp;'comments.id&nbsp;=&nbsp;blogs.id',&nbsp;&lt;strong&gt;'left'&lt;/strong&gt;);&lt;br&nbsp;/&gt;<a name="line_205"></a></li>
+<li id="line_206" class="even"><span class="lineNumber">206&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_206"></a></li>
+<li id="line_207" class="odd"><span class="lineNumber">207&nbsp;</span>//&nbsp;Produces:&nbsp;LEFT&nbsp;JOIN&nbsp;comments&nbsp;ON&nbsp;comments.id&nbsp;=&nbsp;blogs.id&lt;/code&gt;<a name="line_207"></a></li>
+<li id="line_208" class="even"><span class="lineNumber">208&nbsp;</span><a name="line_208"></a></li>
+<li id="line_209" class="odd"><span class="lineNumber">209&nbsp;</span><a name="line_209"></a></li>
+<li id="line_210" class="even"><span class="lineNumber">210&nbsp;</span><a name="line_210"></a></li>
+<li id="line_211" class="odd"><span class="lineNumber">211&nbsp;</span><a name="line_211"></a></li>
+<li id="line_212" class="even"><span class="lineNumber">212&nbsp;</span><a name="line_212"></a></li>
+<li id="line_213" class="odd"><span class="lineNumber">213&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;where();&lt;/h2&gt;<a name="line_213"></a></li>
+<li id="line_214" class="even"><span class="lineNumber">214&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;enables&nbsp;you&nbsp;to&nbsp;set&nbsp;&lt;strong&gt;WHERE&lt;/strong&gt;&nbsp;clauses&nbsp;using&nbsp;one&nbsp;of&nbsp;four&nbsp;methods:&lt;/p&gt;<a name="line_214"></a></li>
+<li id="line_215" class="odd"><span class="lineNumber">215&nbsp;</span><a name="line_215"></a></li>
+<li id="line_216" class="even"><span class="lineNumber">216&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;passed&nbsp;to&nbsp;this&nbsp;function&nbsp;are&nbsp;escaped&nbsp;automatically,&nbsp;producing&nbsp;safer&nbsp;queries.&lt;/p&gt;<a name="line_216"></a></li>
+<li id="line_217" class="odd"><span class="lineNumber">217&nbsp;</span><a name="line_217"></a></li>
+<li id="line_218" class="even"><span class="lineNumber">218&nbsp;</span>&lt;ol&gt;<a name="line_218"></a></li>
+<li id="line_219" class="odd"><span class="lineNumber">219&nbsp;</span>	&lt;li&gt;&lt;strong&gt;Simple&nbsp;key/value&nbsp;method:&lt;/strong&gt;<a name="line_219"></a></li>
+<li id="line_220" class="even"><span class="lineNumber">220&nbsp;</span><a name="line_220"></a></li>
+<li id="line_221" class="odd"><span class="lineNumber">221&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;where('name',&nbsp;$name);<a name="line_221"></a></li>
+<li id="line_222" class="even"><span class="lineNumber">222&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;WHERE&nbsp;name&nbsp;=&nbsp;'Joe'	&lt;/code&gt;<a name="line_222"></a></li>
+<li id="line_223" class="odd"><span class="lineNumber">223&nbsp;</span><a name="line_223"></a></li>
+<li id="line_224" class="even"><span class="lineNumber">224&nbsp;</span>	&lt;p&gt;Notice&nbsp;that&nbsp;the&nbsp;equal&nbsp;sign&nbsp;is&nbsp;added&nbsp;for&nbsp;you.&lt;/p&gt;<a name="line_224"></a></li>
+<li id="line_225" class="odd"><span class="lineNumber">225&nbsp;</span><a name="line_225"></a></li>
+<li id="line_226" class="even"><span class="lineNumber">226&nbsp;</span>	&lt;p&gt;If&nbsp;you&nbsp;use&nbsp;multiple&nbsp;function&nbsp;calls&nbsp;they&nbsp;will&nbsp;be&nbsp;chained&nbsp;together&nbsp;with&nbsp;&lt;var&gt;AND&lt;/var&gt;&nbsp;between&nbsp;them:&lt;/p&gt;<a name="line_226"></a></li>
+<li id="line_227" class="odd"><span class="lineNumber">227&nbsp;</span><a name="line_227"></a></li>
+<li id="line_228" class="even"><span class="lineNumber">228&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;where('name',&nbsp;$name);&lt;br&nbsp;/&gt;<a name="line_228"></a></li>
+<li id="line_229" class="odd"><span class="lineNumber">229&nbsp;</span>	$this-&gt;db-&gt;where('title',&nbsp;$title);&lt;br&nbsp;/&gt;<a name="line_229"></a></li>
+<li id="line_230" class="even"><span class="lineNumber">230&nbsp;</span>	$this-&gt;db-&gt;where('status',&nbsp;$status);<a name="line_230"></a></li>
+<li id="line_231" class="odd"><span class="lineNumber">231&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;WHERE&nbsp;name&nbsp;=&nbsp;'Joe'&nbsp;AND&nbsp;title&nbsp;=&nbsp;'boss'&nbsp;AND&nbsp;status&nbsp;=&nbsp;'active'	&lt;/code&gt;	&lt;/li&gt;<a name="line_231"></a></li>
+<li id="line_232" class="even"><span class="lineNumber">232&nbsp;</span><a name="line_232"></a></li>
+<li id="line_233" class="odd"><span class="lineNumber">233&nbsp;</span>	&lt;li&gt;&lt;strong&gt;Custom&nbsp;key/value&nbsp;method:&lt;/strong&gt;<a name="line_233"></a></li>
+<li id="line_234" class="even"><span class="lineNumber">234&nbsp;</span><a name="line_234"></a></li>
+<li id="line_235" class="odd"><span class="lineNumber">235&nbsp;</span>	&lt;p&gt;You&nbsp;can&nbsp;include&nbsp;an&nbsp;operator&nbsp;in&nbsp;the&nbsp;first&nbsp;parameter&nbsp;in&nbsp;order&nbsp;to&nbsp;control&nbsp;the&nbsp;comparison:&lt;/p&gt;<a name="line_235"></a></li>
+<li id="line_236" class="even"><span class="lineNumber">236&nbsp;</span><a name="line_236"></a></li>
+<li id="line_237" class="odd"><span class="lineNumber">237&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;where('name&nbsp;!=',&nbsp;$name);&lt;br&nbsp;/&gt;<a name="line_237"></a></li>
+<li id="line_238" class="even"><span class="lineNumber">238&nbsp;</span>	$this-&gt;db-&gt;where('id&nbsp;&lt;',&nbsp;$id);<a name="line_238"></a></li>
+<li id="line_239" class="odd"><span class="lineNumber">239&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;WHERE&nbsp;name&nbsp;!=&nbsp;'Joe'&nbsp;AND&nbsp;id&nbsp;&lt;&nbsp;45	&lt;/code&gt;	&lt;/li&gt;<a name="line_239"></a></li>
+<li id="line_240" class="even"><span class="lineNumber">240&nbsp;</span>	&lt;li&gt;&lt;strong&gt;Associative&nbsp;array&nbsp;method:&lt;/strong&gt;<a name="line_240"></a></li>
+<li id="line_241" class="odd"><span class="lineNumber">241&nbsp;</span><a name="line_241"></a></li>
+<li id="line_242" class="even"><span class="lineNumber">242&nbsp;</span><a name="line_242"></a></li>
+<li id="line_243" class="odd"><span class="lineNumber">243&nbsp;</span>	&lt;code&gt;<a name="line_243"></a></li>
+<li id="line_244" class="even"><span class="lineNumber">244&nbsp;</span>	$array&nbsp;=&nbsp;array('name'&nbsp;=&gt;&nbsp;$name,&nbsp;'title'&nbsp;=&gt;&nbsp;$title,&nbsp;'status'&nbsp;=&gt;&nbsp;$status);&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_244"></a></li>
+<li id="line_245" class="odd"><span class="lineNumber">245&nbsp;</span><a name="line_245"></a></li>
+<li id="line_246" class="even"><span class="lineNumber">246&nbsp;</span>	$this-&gt;db-&gt;where($array);<a name="line_246"></a></li>
+<li id="line_247" class="odd"><span class="lineNumber">247&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;WHERE&nbsp;name&nbsp;=&nbsp;'Joe'&nbsp;AND&nbsp;title&nbsp;=&nbsp;'boss'&nbsp;AND&nbsp;status&nbsp;=&nbsp;'active'	&lt;/code&gt;<a name="line_247"></a></li>
+<li id="line_248" class="even"><span class="lineNumber">248&nbsp;</span><a name="line_248"></a></li>
+<li id="line_249" class="odd"><span class="lineNumber">249&nbsp;</span>	&lt;p&gt;You&nbsp;can&nbsp;include&nbsp;your&nbsp;own&nbsp;operators&nbsp;using&nbsp;this&nbsp;method&nbsp;as&nbsp;well:&lt;/p&gt;<a name="line_249"></a></li>
+<li id="line_250" class="even"><span class="lineNumber">250&nbsp;</span><a name="line_250"></a></li>
+<li id="line_251" class="odd"><span class="lineNumber">251&nbsp;</span>	&lt;code&gt;<a name="line_251"></a></li>
+<li id="line_252" class="even"><span class="lineNumber">252&nbsp;</span>	$array&nbsp;=&nbsp;array('name&nbsp;!='&nbsp;=&gt;&nbsp;$name,&nbsp;'id&nbsp;&lt;'&nbsp;=&gt;&nbsp;$id,&nbsp;'date&nbsp;&gt;'&nbsp;=&gt;&nbsp;$date);&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_252"></a></li>
+<li id="line_253" class="odd"><span class="lineNumber">253&nbsp;</span><a name="line_253"></a></li>
+<li id="line_254" class="even"><span class="lineNumber">254&nbsp;</span>	$this-&gt;db-&gt;where($array);&lt;/code&gt;	&lt;/li&gt;<a name="line_254"></a></li>
+<li id="line_255" class="odd"><span class="lineNumber">255&nbsp;</span>		&lt;li&gt;&lt;strong&gt;Custom&nbsp;string:&lt;/strong&gt;<a name="line_255"></a></li>
+<li id="line_256" class="even"><span class="lineNumber">256&nbsp;</span><a name="line_256"></a></li>
+<li id="line_257" class="odd"><span class="lineNumber">257&nbsp;</span>		&lt;p&gt;You&nbsp;can&nbsp;write&nbsp;your&nbsp;own&nbsp;clauses&nbsp;manually:&lt;/p&gt;<a name="line_257"></a></li>
+<li id="line_258" class="even"><span class="lineNumber">258&nbsp;</span><a name="line_258"></a></li>
+<li id="line_259" class="odd"><span class="lineNumber">259&nbsp;</span>		&lt;code&gt;<a name="line_259"></a></li>
+<li id="line_260" class="even"><span class="lineNumber">260&nbsp;</span>		$where&nbsp;=&nbsp;"name='Joe'&nbsp;AND&nbsp;status='boss'&nbsp;OR&nbsp;status='active'";&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_260"></a></li>
+<li id="line_261" class="odd"><span class="lineNumber">261&nbsp;</span>		$this-&gt;db-&gt;where($where);&lt;/code&gt;&lt;/li&gt;<a name="line_261"></a></li>
+<li id="line_262" class="even"><span class="lineNumber">262&nbsp;</span>	&lt;/ol&gt;<a name="line_262"></a></li>
+<li id="line_263" class="odd"><span class="lineNumber">263&nbsp;</span><a name="line_263"></a></li>
+<li id="line_264" class="even"><span class="lineNumber">264&nbsp;</span><a name="line_264"></a></li>
+<li id="line_265" class="odd"><span class="lineNumber">265&nbsp;</span>&lt;p&gt;$this-&amp;gt;db-&amp;gt;where()&nbsp;accepts&nbsp;an&nbsp;optional&nbsp;third&nbsp;parameter.&nbsp;If&nbsp;you&nbsp;set&nbsp;it&nbsp;to&nbsp;FALSE,&nbsp;CodeIgniter&nbsp;will&nbsp;not&nbsp;try&nbsp;to&nbsp;protect&nbsp;your&nbsp;field&nbsp;or&nbsp;table&nbsp;names&nbsp;with&nbsp;backticks.&lt;/p&gt;<a name="line_265"></a></li>
+<li id="line_266" class="even"><span class="lineNumber">266&nbsp;</span>&lt;p&gt;&lt;code&gt;		$this-&amp;gt;db-&amp;gt;where('MATCH&nbsp;(field)&nbsp;AGAINST&nbsp;(&amp;quot;value&amp;quot;)',&nbsp;NULL,&nbsp;FALSE);&lt;br&nbsp;/&gt;<a name="line_266"></a></li>
+<li id="line_267" class="odd"><span class="lineNumber">267&nbsp;</span>&lt;/code&gt;&lt;/p&gt;<a name="line_267"></a></li>
+<li id="line_268" class="even"><span class="lineNumber">268&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;or_where();&lt;/h2&gt;<a name="line_268"></a></li>
+<li id="line_269" class="odd"><span class="lineNumber">269&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;the&nbsp;one&nbsp;above,&nbsp;except&nbsp;that&nbsp;multiple&nbsp;instances&nbsp;are&nbsp;joined&nbsp;by&nbsp;OR:&lt;/p&gt;<a name="line_269"></a></li>
+<li id="line_270" class="even"><span class="lineNumber">270&nbsp;</span><a name="line_270"></a></li>
+<li id="line_271" class="odd"><span class="lineNumber">271&nbsp;</span>&lt;code&gt;<a name="line_271"></a></li>
+<li id="line_272" class="even"><span class="lineNumber">272&nbsp;</span>$this-&gt;db-&gt;where('name&nbsp;!=',&nbsp;$name);&lt;br&nbsp;/&gt;<a name="line_272"></a></li>
+<li id="line_273" class="odd"><span class="lineNumber">273&nbsp;</span>$this-&gt;db-&gt;or_where('id&nbsp;&gt;',&nbsp;$id);<a name="line_273"></a></li>
+<li id="line_274" class="even"><span class="lineNumber">274&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_274"></a></li>
+<li id="line_275" class="odd"><span class="lineNumber">275&nbsp;</span>&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;WHERE&nbsp;name&nbsp;!=&nbsp;'Joe'&nbsp;OR&nbsp;id&nbsp;&gt;&nbsp;50&lt;/code&gt;<a name="line_275"></a></li>
+<li id="line_276" class="even"><span class="lineNumber">276&nbsp;</span><a name="line_276"></a></li>
+<li id="line_277" class="odd"><span class="lineNumber">277&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;or_where()&nbsp;was&nbsp;formerly&nbsp;known&nbsp;as&nbsp;orwhere(),&nbsp;which&nbsp;has&nbsp;been&nbsp;removed.&lt;/p&gt;<a name="line_277"></a></li>
+<li id="line_278" class="even"><span class="lineNumber">278&nbsp;</span><a name="line_278"></a></li>
+<li id="line_279" class="odd"><span class="lineNumber">279&nbsp;</span><a name="line_279"></a></li>
+<li id="line_280" class="even"><span class="lineNumber">280&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;where_in();&lt;/h2&gt;<a name="line_280"></a></li>
+<li id="line_281" class="odd"><span class="lineNumber">281&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;WHERE&nbsp;field&nbsp;IN&nbsp;('item',&nbsp;'item')&nbsp;SQL&nbsp;query&nbsp;joined&nbsp;with&nbsp;&nbsp;AND&nbsp;if&nbsp;appropriate&lt;/p&gt;<a name="line_281"></a></li>
+<li id="line_282" class="even"><span class="lineNumber">282&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_282"></a></li>
+<li id="line_283" class="odd"><span class="lineNumber">283&nbsp;</span>	$names&nbsp;=&nbsp;array('Frank',&nbsp;'Todd',&nbsp;'James');&lt;br&nbsp;/&gt;<a name="line_283"></a></li>
+<li id="line_284" class="even"><span class="lineNumber">284&nbsp;</span>	$this-&gt;db-&gt;where_in('username',&nbsp;$names);&lt;br&nbsp;/&gt;<a name="line_284"></a></li>
+<li id="line_285" class="odd"><span class="lineNumber">285&nbsp;</span>	//&nbsp;Produces:&nbsp;WHERE&nbsp;username&nbsp;IN&nbsp;('Frank',&nbsp;'Todd',&nbsp;'James')&lt;/code&gt;&lt;/p&gt;<a name="line_285"></a></li>
+<li id="line_286" class="even"><span class="lineNumber">286&nbsp;</span><a name="line_286"></a></li>
+<li id="line_287" class="odd"><span class="lineNumber">287&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;or_where_in();&lt;/h2&gt;<a name="line_287"></a></li>
+<li id="line_288" class="even"><span class="lineNumber">288&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;WHERE&nbsp;field&nbsp;IN&nbsp;('item',&nbsp;'item')&nbsp;SQL&nbsp;query&nbsp;joined&nbsp;with&nbsp;OR&nbsp;if&nbsp;appropriate&lt;/p&gt;<a name="line_288"></a></li>
+<li id="line_289" class="odd"><span class="lineNumber">289&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_289"></a></li>
+<li id="line_290" class="even"><span class="lineNumber">290&nbsp;</span>	$names&nbsp;=&nbsp;array('Frank',&nbsp;'Todd',&nbsp;'James');&lt;br&nbsp;/&gt;<a name="line_290"></a></li>
+<li id="line_291" class="odd"><span class="lineNumber">291&nbsp;</span>	$this-&gt;db-&gt;or_where_in('username',&nbsp;$names);&lt;br&nbsp;/&gt;<a name="line_291"></a></li>
+<li id="line_292" class="even"><span class="lineNumber">292&nbsp;</span>	//&nbsp;Produces:&nbsp;OR&nbsp;username&nbsp;IN&nbsp;('Frank',&nbsp;'Todd',&nbsp;'James')&lt;/code&gt;&lt;/p&gt;<a name="line_292"></a></li>
+<li id="line_293" class="odd"><span class="lineNumber">293&nbsp;</span><a name="line_293"></a></li>
+<li id="line_294" class="even"><span class="lineNumber">294&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;where_not_in();&lt;/h2&gt;<a name="line_294"></a></li>
+<li id="line_295" class="odd"><span class="lineNumber">295&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;WHERE&nbsp;field&nbsp;NOT&nbsp;IN&nbsp;('item',&nbsp;'item')&nbsp;SQL&nbsp;query&nbsp;joined&nbsp;with&nbsp;AND&nbsp;if&nbsp;appropriate&lt;/p&gt;<a name="line_295"></a></li>
+<li id="line_296" class="even"><span class="lineNumber">296&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_296"></a></li>
+<li id="line_297" class="odd"><span class="lineNumber">297&nbsp;</span>	$names&nbsp;=&nbsp;array('Frank',&nbsp;'Todd',&nbsp;'James');&lt;br&nbsp;/&gt;<a name="line_297"></a></li>
+<li id="line_298" class="even"><span class="lineNumber">298&nbsp;</span>	$this-&gt;db-&gt;where_not_in('username',&nbsp;$names);&lt;br&nbsp;/&gt;<a name="line_298"></a></li>
+<li id="line_299" class="odd"><span class="lineNumber">299&nbsp;</span>	//&nbsp;Produces:&nbsp;WHERE&nbsp;username&nbsp;NOT&nbsp;IN&nbsp;('Frank',&nbsp;'Todd',&nbsp;'James')&lt;/code&gt;&lt;/p&gt;<a name="line_299"></a></li>
+<li id="line_300" class="even"><span class="lineNumber">300&nbsp;</span><a name="line_300"></a></li>
+<li id="line_301" class="odd"><span class="lineNumber">301&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;or_where_not_in();&lt;/h2&gt;<a name="line_301"></a></li>
+<li id="line_302" class="even"><span class="lineNumber">302&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;WHERE&nbsp;field&nbsp;NOT&nbsp;IN&nbsp;('item',&nbsp;'item')&nbsp;SQL&nbsp;query&nbsp;joined&nbsp;with&nbsp;OR&nbsp;if&nbsp;appropriate&lt;/p&gt;<a name="line_302"></a></li>
+<li id="line_303" class="odd"><span class="lineNumber">303&nbsp;</span>&lt;p&gt;&lt;code&gt;<a name="line_303"></a></li>
+<li id="line_304" class="even"><span class="lineNumber">304&nbsp;</span>	$names&nbsp;=&nbsp;array('Frank',&nbsp;'Todd',&nbsp;'James');&lt;br&nbsp;/&gt;<a name="line_304"></a></li>
+<li id="line_305" class="odd"><span class="lineNumber">305&nbsp;</span>	$this-&gt;db-&gt;or_where_not_in('username',&nbsp;$names);&lt;br&nbsp;/&gt;<a name="line_305"></a></li>
+<li id="line_306" class="even"><span class="lineNumber">306&nbsp;</span>	//&nbsp;Produces:&nbsp;OR&nbsp;username&nbsp;NOT&nbsp;IN&nbsp;('Frank',&nbsp;'Todd',&nbsp;'James')&lt;/code&gt;&lt;/p&gt;<a name="line_306"></a></li>
+<li id="line_307" class="odd"><span class="lineNumber">307&nbsp;</span><a name="line_307"></a></li>
+<li id="line_308" class="even"><span class="lineNumber">308&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;like();&lt;/h2&gt;<a name="line_308"></a></li>
+<li id="line_309" class="odd"><span class="lineNumber">309&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;enables&nbsp;you&nbsp;to&nbsp;generate&nbsp;&lt;strong&gt;LIKE&lt;/strong&gt;&nbsp;clauses,&nbsp;useful&nbsp;for&nbsp;doing&nbsp;searches.&lt;/p&gt;<a name="line_309"></a></li>
+<li id="line_310" class="even"><span class="lineNumber">310&nbsp;</span><a name="line_310"></a></li>
+<li id="line_311" class="odd"><span class="lineNumber">311&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;passed&nbsp;to&nbsp;this&nbsp;function&nbsp;are&nbsp;escaped&nbsp;automatically.&lt;/p&gt;<a name="line_311"></a></li>
+<li id="line_312" class="even"><span class="lineNumber">312&nbsp;</span><a name="line_312"></a></li>
+<li id="line_313" class="odd"><span class="lineNumber">313&nbsp;</span><a name="line_313"></a></li>
+<li id="line_314" class="even"><span class="lineNumber">314&nbsp;</span>&lt;ol&gt;<a name="line_314"></a></li>
+<li id="line_315" class="odd"><span class="lineNumber">315&nbsp;</span>	&lt;li&gt;&lt;strong&gt;Simple&nbsp;key/value&nbsp;method:&lt;/strong&gt;<a name="line_315"></a></li>
+<li id="line_316" class="even"><span class="lineNumber">316&nbsp;</span><a name="line_316"></a></li>
+<li id="line_317" class="odd"><span class="lineNumber">317&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;like('title',&nbsp;'match');<a name="line_317"></a></li>
+<li id="line_318" class="even"><span class="lineNumber">318&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match%'	&lt;/code&gt;<a name="line_318"></a></li>
+<li id="line_319" class="odd"><span class="lineNumber">319&nbsp;</span><a name="line_319"></a></li>
+<li id="line_320" class="even"><span class="lineNumber">320&nbsp;</span>	&lt;p&gt;If&nbsp;you&nbsp;use&nbsp;multiple&nbsp;function&nbsp;calls&nbsp;they&nbsp;will&nbsp;be&nbsp;chained&nbsp;together&nbsp;with&nbsp;&lt;var&gt;AND&lt;/var&gt;&nbsp;between&nbsp;them:&lt;/p&gt;<a name="line_320"></a></li>
+<li id="line_321" class="odd"><span class="lineNumber">321&nbsp;</span><a name="line_321"></a></li>
+<li id="line_322" class="even"><span class="lineNumber">322&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;like('title',&nbsp;'match');&lt;br&nbsp;/&gt;<a name="line_322"></a></li>
+<li id="line_323" class="odd"><span class="lineNumber">323&nbsp;</span>	$this-&gt;db-&gt;like('body',&nbsp;'match');<a name="line_323"></a></li>
+<li id="line_324" class="even"><span class="lineNumber">324&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_324"></a></li>
+<li id="line_325" class="odd"><span class="lineNumber">325&nbsp;</span>	//&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match%'&nbsp;AND&nbsp;&nbsp;body&nbsp;LIKE&nbsp;'%match%&lt;/code&gt;<a name="line_325"></a></li>
+<li id="line_326" class="even"><span class="lineNumber">326&nbsp;</span>	If&nbsp;you&nbsp;want&nbsp;to&nbsp;control&nbsp;where&nbsp;the&nbsp;wildcard&nbsp;(%)&nbsp;is&nbsp;placed,&nbsp;you&nbsp;can&nbsp;use&nbsp;an&nbsp;optional&nbsp;third&nbsp;argument.&nbsp;Your&nbsp;options&nbsp;are&nbsp;'before',&nbsp;'after'&nbsp;and&nbsp;'both'&nbsp;(which&nbsp;is&nbsp;the&nbsp;default).<a name="line_326"></a></li>
+<li id="line_327" class="odd"><span class="lineNumber">327&nbsp;</span>	&lt;code&gt;$this-&gt;db-&gt;like('title',&nbsp;'match',&nbsp;'before');<a name="line_327"></a></li>
+<li id="line_328" class="even"><span class="lineNumber">328&nbsp;</span>	&lt;br&nbsp;/&gt;<a name="line_328"></a></li>
+<li id="line_329" class="odd"><span class="lineNumber">329&nbsp;</span>		//&nbsp;Produces:&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match'	&lt;br&nbsp;/&gt;<a name="line_329"></a></li>
+<li id="line_330" class="even"><span class="lineNumber">330&nbsp;</span>		&lt;br&nbsp;/&gt;<a name="line_330"></a></li>
+<li id="line_331" class="odd"><span class="lineNumber">331&nbsp;</span>	$this-&amp;gt;db-&amp;gt;like('title',&nbsp;'match',&nbsp;'after');&nbsp;&lt;br&nbsp;/&gt;<a name="line_331"></a></li>
+<li id="line_332" class="even"><span class="lineNumber">332&nbsp;</span>//&nbsp;Produces:&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'match%'&nbsp;&lt;br&nbsp;/&gt;<a name="line_332"></a></li>
+<li id="line_333" class="odd"><span class="lineNumber">333&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_333"></a></li>
+<li id="line_334" class="even"><span class="lineNumber">334&nbsp;</span>	$this-&amp;gt;db-&amp;gt;like('title',&nbsp;'match',&nbsp;'both');&nbsp;&lt;br&nbsp;/&gt;<a name="line_334"></a></li>
+<li id="line_335" class="odd"><span class="lineNumber">335&nbsp;</span>//&nbsp;Produces:&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match%'&nbsp;&lt;/code&gt;	&lt;/li&gt;<a name="line_335"></a></li>
+<li id="line_336" class="even"><span class="lineNumber">336&nbsp;</span><a name="line_336"></a></li>
+<li id="line_337" class="odd"><span class="lineNumber">337&nbsp;</span>If&nbsp;you&nbsp;do&nbsp;not&nbsp;want&nbsp;to&nbsp;use&nbsp;the&nbsp;wildcard&nbsp;(%)&nbsp;you&nbsp;can&nbsp;pass&nbsp;to&nbsp;the&nbsp;optional&nbsp;third&nbsp;argument&nbsp;the&nbsp;option&nbsp;'none'.<a name="line_337"></a></li>
+<li id="line_338" class="even"><span class="lineNumber">338&nbsp;</span><a name="line_338"></a></li>
+<li id="line_339" class="odd"><span class="lineNumber">339&nbsp;</span>&lt;code&gt;<a name="line_339"></a></li>
+<li id="line_340" class="even"><span class="lineNumber">340&nbsp;</span>	$this-&amp;gt;db-&amp;gt;like('title',&nbsp;'match',&nbsp;'none');&nbsp;&lt;br&nbsp;/&gt;<a name="line_340"></a></li>
+<li id="line_341" class="odd"><span class="lineNumber">341&nbsp;</span>//&nbsp;Produces:&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'match'<a name="line_341"></a></li>
+<li id="line_342" class="even"><span class="lineNumber">342&nbsp;</span>&lt;/code&gt;<a name="line_342"></a></li>
+<li id="line_343" class="odd"><span class="lineNumber">343&nbsp;</span><a name="line_343"></a></li>
+<li id="line_344" class="even"><span class="lineNumber">344&nbsp;</span>	&lt;li&gt;&lt;strong&gt;Associative&nbsp;array&nbsp;method:&lt;/strong&gt;<a name="line_344"></a></li>
+<li id="line_345" class="odd"><span class="lineNumber">345&nbsp;</span><a name="line_345"></a></li>
+<li id="line_346" class="even"><span class="lineNumber">346&nbsp;</span>	&lt;code&gt;<a name="line_346"></a></li>
+<li id="line_347" class="odd"><span class="lineNumber">347&nbsp;</span>	$array&nbsp;=&nbsp;array('title'&nbsp;=&gt;&nbsp;$match,&nbsp;'page1'&nbsp;=&gt;&nbsp;$match,&nbsp;'page2'&nbsp;=&gt;&nbsp;$match);&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_347"></a></li>
+<li id="line_348" class="even"><span class="lineNumber">348&nbsp;</span><a name="line_348"></a></li>
+<li id="line_349" class="odd"><span class="lineNumber">349&nbsp;</span>	$this-&gt;db-&gt;like($array);<a name="line_349"></a></li>
+<li id="line_350" class="even"><span class="lineNumber">350&nbsp;</span>	&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match%'&nbsp;AND&nbsp;&nbsp;page1&nbsp;LIKE&nbsp;'%match%'&nbsp;AND&nbsp;&nbsp;page2&nbsp;LIKE&nbsp;'%match%'&lt;/code&gt;&lt;/li&gt;<a name="line_350"></a></li>
+<li id="line_351" class="odd"><span class="lineNumber">351&nbsp;</span>	&lt;/ol&gt;<a name="line_351"></a></li>
+<li id="line_352" class="even"><span class="lineNumber">352&nbsp;</span><a name="line_352"></a></li>
+<li id="line_353" class="odd"><span class="lineNumber">353&nbsp;</span><a name="line_353"></a></li>
+<li id="line_354" class="even"><span class="lineNumber">354&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;or_like();&lt;/h2&gt;<a name="line_354"></a></li>
+<li id="line_355" class="odd"><span class="lineNumber">355&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;the&nbsp;one&nbsp;above,&nbsp;except&nbsp;that&nbsp;multiple&nbsp;instances&nbsp;are&nbsp;joined&nbsp;by&nbsp;OR:&lt;/p&gt;<a name="line_355"></a></li>
+<li id="line_356" class="even"><span class="lineNumber">356&nbsp;</span><a name="line_356"></a></li>
+<li id="line_357" class="odd"><span class="lineNumber">357&nbsp;</span>&lt;code&gt;<a name="line_357"></a></li>
+<li id="line_358" class="even"><span class="lineNumber">358&nbsp;</span>$this-&gt;db-&gt;like('title',&nbsp;'match');&lt;br&nbsp;/&gt;<a name="line_358"></a></li>
+<li id="line_359" class="odd"><span class="lineNumber">359&nbsp;</span>$this-&gt;db-&gt;or_like('body',&nbsp;$match);<a name="line_359"></a></li>
+<li id="line_360" class="even"><span class="lineNumber">360&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_360"></a></li>
+<li id="line_361" class="odd"><span class="lineNumber">361&nbsp;</span>&lt;br&nbsp;/&gt;//&nbsp;WHERE&nbsp;title&nbsp;LIKE&nbsp;'%match%'&nbsp;OR&nbsp;&nbsp;body&nbsp;LIKE&nbsp;'%match%'&lt;/code&gt;<a name="line_361"></a></li>
+<li id="line_362" class="even"><span class="lineNumber">362&nbsp;</span><a name="line_362"></a></li>
+<li id="line_363" class="odd"><span class="lineNumber">363&nbsp;</span><a name="line_363"></a></li>
+<li id="line_364" class="even"><span class="lineNumber">364&nbsp;</span><a name="line_364"></a></li>
+<li id="line_365" class="odd"><span class="lineNumber">365&nbsp;</span><a name="line_365"></a></li>
+<li id="line_366" class="even"><span class="lineNumber">366&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;or_like()&nbsp;was&nbsp;formerly&nbsp;known&nbsp;as&nbsp;orlike(),&nbsp;which&nbsp;has&nbsp;been&nbsp;removed.&lt;/p&gt;<a name="line_366"></a></li>
+<li id="line_367" class="odd"><span class="lineNumber">367&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;not_like();&lt;/h2&gt;<a name="line_367"></a></li>
+<li id="line_368" class="even"><span class="lineNumber">368&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;&lt;strong&gt;like()&lt;/strong&gt;,&nbsp;except&nbsp;that&nbsp;it&nbsp;generates&nbsp;NOT&nbsp;LIKE&nbsp;statements:&lt;/p&gt;<a name="line_368"></a></li>
+<li id="line_369" class="odd"><span class="lineNumber">369&nbsp;</span>&lt;code&gt;&nbsp;$this-&amp;gt;db-&amp;gt;not_like('title',&nbsp;'match');&lt;br&nbsp;/&gt;<a name="line_369"></a></li>
+<li id="line_370" class="even"><span class="lineNumber">370&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_370"></a></li>
+<li id="line_371" class="odd"><span class="lineNumber">371&nbsp;</span>//&nbsp;WHERE&nbsp;title&nbsp;NOT&nbsp;LIKE&nbsp;'%match%&lt;/code&gt;<a name="line_371"></a></li>
+<li id="line_372" class="even"><span class="lineNumber">372&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;or_not_like();&lt;/h2&gt;<a name="line_372"></a></li>
+<li id="line_373" class="odd"><span class="lineNumber">373&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;is&nbsp;identical&nbsp;to&nbsp;&lt;strong&gt;not_like()&lt;/strong&gt;,&nbsp;except&nbsp;that&nbsp;multiple&nbsp;instances&nbsp;are&nbsp;joined&nbsp;by&nbsp;OR:&lt;/p&gt;<a name="line_373"></a></li>
+<li id="line_374" class="even"><span class="lineNumber">374&nbsp;</span>&lt;code&gt;&nbsp;$this-&amp;gt;db-&amp;gt;like('title',&nbsp;'match');&lt;br&nbsp;/&gt;<a name="line_374"></a></li>
+<li id="line_375" class="odd"><span class="lineNumber">375&nbsp;</span>$this-&amp;gt;db-&amp;gt;or_not_like('body',&nbsp;'match');&nbsp;&lt;br&nbsp;/&gt;<a name="line_375"></a></li>
+<li id="line_376" class="even"><span class="lineNumber">376&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_376"></a></li>
+<li id="line_377" class="odd"><span class="lineNumber">377&nbsp;</span>//&nbsp;WHERE&nbsp;title&nbsp;&nbsp;LIKE&nbsp;'%match%&nbsp;OR&nbsp;body&nbsp;NOT&nbsp;LIKE&nbsp;'%match%'&lt;/code&gt;<a name="line_377"></a></li>
+<li id="line_378" class="even"><span class="lineNumber">378&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;group_by();&lt;/h2&gt;<a name="line_378"></a></li>
+<li id="line_379" class="odd"><span class="lineNumber">379&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;write&nbsp;the&nbsp;GROUP&nbsp;BY&nbsp;portion&nbsp;of&nbsp;your&nbsp;query:&lt;/p&gt;<a name="line_379"></a></li>
+<li id="line_380" class="even"><span class="lineNumber">380&nbsp;</span><a name="line_380"></a></li>
+<li id="line_381" class="odd"><span class="lineNumber">381&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;group_by("title");<a name="line_381"></a></li>
+<li id="line_382" class="even"><span class="lineNumber">382&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;GROUP&nbsp;BY&nbsp;title<a name="line_382"></a></li>
+<li id="line_383" class="odd"><span class="lineNumber">383&nbsp;</span>&lt;/code&gt;<a name="line_383"></a></li>
+<li id="line_384" class="even"><span class="lineNumber">384&nbsp;</span><a name="line_384"></a></li>
+<li id="line_385" class="odd"><span class="lineNumber">385&nbsp;</span>&lt;p&gt;You&nbsp;can&nbsp;also&nbsp;pass&nbsp;an&nbsp;array&nbsp;of&nbsp;multiple&nbsp;values&nbsp;as&nbsp;well:&lt;/p&gt;<a name="line_385"></a></li>
+<li id="line_386" class="even"><span class="lineNumber">386&nbsp;</span><a name="line_386"></a></li>
+<li id="line_387" class="odd"><span class="lineNumber">387&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;group_by(array("title",&nbsp;"date"));<a name="line_387"></a></li>
+<li id="line_388" class="even"><span class="lineNumber">388&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_388"></a></li>
+<li id="line_389" class="odd"><span class="lineNumber">389&nbsp;</span>&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;GROUP&nbsp;BY&nbsp;title,&nbsp;date&lt;/code&gt;<a name="line_389"></a></li>
+<li id="line_390" class="even"><span class="lineNumber">390&nbsp;</span><a name="line_390"></a></li>
+<li id="line_391" class="odd"><span class="lineNumber">391&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;group_by()&nbsp;was&nbsp;formerly&nbsp;known&nbsp;as&nbsp;groupby(),&nbsp;which&nbsp;has&nbsp;been&nbsp;removed.&nbsp;&lt;/p&gt;<a name="line_391"></a></li>
+<li id="line_392" class="even"><span class="lineNumber">392&nbsp;</span><a name="line_392"></a></li>
+<li id="line_393" class="odd"><span class="lineNumber">393&nbsp;</span>&lt;h2&gt;&nbsp;$this-&amp;gt;db-&amp;gt;distinct();&lt;br&nbsp;/&gt;<a name="line_393"></a></li>
+<li id="line_394" class="even"><span class="lineNumber">394&nbsp;</span>&lt;/h2&gt;<a name="line_394"></a></li>
+<li id="line_395" class="odd"><span class="lineNumber">395&nbsp;</span>&lt;p&gt;Adds&nbsp;the&nbsp;&amp;quot;DISTINCT&amp;quot;&nbsp;keyword&nbsp;to&nbsp;&nbsp;a&nbsp;query&lt;/p&gt;<a name="line_395"></a></li>
+<li id="line_396" class="even"><span class="lineNumber">396&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&amp;gt;db-&amp;gt;distinct();&lt;br&nbsp;/&gt;<a name="line_396"></a></li>
+<li id="line_397" class="odd"><span class="lineNumber">397&nbsp;</span>	$this-&amp;gt;db-&amp;gt;get('table');&lt;br&nbsp;/&gt;<a name="line_397"></a></li>
+<li id="line_398" class="even"><span class="lineNumber">398&nbsp;</span>		&lt;br&nbsp;/&gt;<a name="line_398"></a></li>
+<li id="line_399" class="odd"><span class="lineNumber">399&nbsp;</span>	//&nbsp;Produces:&nbsp;SELECT&nbsp;DISTINCT&nbsp;*&nbsp;FROM&nbsp;table&lt;/code&gt;&lt;/p&gt;<a name="line_399"></a></li>
+<li id="line_400" class="even"><span class="lineNumber">400&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;having();&lt;/h2&gt;<a name="line_400"></a></li>
+<li id="line_401" class="odd"><span class="lineNumber">401&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;write&nbsp;the&nbsp;HAVING&nbsp;portion&nbsp;of&nbsp;your&nbsp;query.&nbsp;There&nbsp;are&nbsp;2&nbsp;possible&nbsp;syntaxes,&nbsp;1&nbsp;argument&nbsp;or&nbsp;2:&lt;/p&gt;<a name="line_401"></a></li>
+<li id="line_402" class="even"><span class="lineNumber">402&nbsp;</span><a name="line_402"></a></li>
+<li id="line_403" class="odd"><span class="lineNumber">403&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;having('user_id&nbsp;=&nbsp;45');<a name="line_403"></a></li>
+<li id="line_404" class="even"><span class="lineNumber">404&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_404"></a></li>
+<li id="line_405" class="odd"><span class="lineNumber">405&nbsp;</span>//&nbsp;Produces:&nbsp;HAVING&nbsp;user_id&nbsp;=&nbsp;45&lt;br&nbsp;/&gt;<a name="line_405"></a></li>
+<li id="line_406" class="even"><span class="lineNumber">406&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_406"></a></li>
+<li id="line_407" class="odd"><span class="lineNumber">407&nbsp;</span>$this-&amp;gt;db-&amp;gt;having('user_id',&nbsp;&nbsp;45);&nbsp;&lt;br&nbsp;/&gt;<a name="line_407"></a></li>
+<li id="line_408" class="even"><span class="lineNumber">408&nbsp;</span>//&nbsp;Produces:&nbsp;HAVING&nbsp;user_id&nbsp;=&nbsp;45&lt;br&nbsp;/&gt;<a name="line_408"></a></li>
+<li id="line_409" class="odd"><span class="lineNumber">409&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_409"></a></li>
+<li id="line_410" class="even"><span class="lineNumber">410&nbsp;</span>&lt;/code&gt;<a name="line_410"></a></li>
+<li id="line_411" class="odd"><span class="lineNumber">411&nbsp;</span><a name="line_411"></a></li>
+<li id="line_412" class="even"><span class="lineNumber">412&nbsp;</span>&lt;p&gt;You&nbsp;can&nbsp;also&nbsp;pass&nbsp;an&nbsp;array&nbsp;of&nbsp;multiple&nbsp;values&nbsp;as&nbsp;well:&lt;/p&gt;<a name="line_412"></a></li>
+<li id="line_413" class="odd"><span class="lineNumber">413&nbsp;</span><a name="line_413"></a></li>
+<li id="line_414" class="even"><span class="lineNumber">414&nbsp;</span><a name="line_414"></a></li>
+<li id="line_415" class="odd"><span class="lineNumber">415&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&gt;db-&gt;having(array('title&nbsp;='&nbsp;=&gt;&nbsp;'My&nbsp;Title',&nbsp;'id&nbsp;&lt;'&nbsp;=&gt;&nbsp;$id));&nbsp;&lt;br&nbsp;/&gt;<a name="line_415"></a></li>
+<li id="line_416" class="even"><span class="lineNumber">416&nbsp;</span>		&lt;br&nbsp;/&gt;<a name="line_416"></a></li>
+<li id="line_417" class="odd"><span class="lineNumber">417&nbsp;</span>	//&nbsp;Produces:&nbsp;HAVING&nbsp;title&nbsp;=&nbsp;'My&nbsp;Title',&nbsp;id&nbsp;&lt;&nbsp;45&lt;/code&gt;&lt;/p&gt;<a name="line_417"></a></li>
+<li id="line_418" class="even"><span class="lineNumber">418&nbsp;</span>&lt;p&gt;If&nbsp;you&nbsp;are&nbsp;using&nbsp;a&nbsp;database&nbsp;that&nbsp;CodeIgniter&nbsp;escapes&nbsp;queries&nbsp;for,&nbsp;you&nbsp;can&nbsp;prevent&nbsp;escaping&nbsp;content&nbsp;by&nbsp;passing&nbsp;an&nbsp;optional&nbsp;third&nbsp;argument,&nbsp;and&nbsp;setting&nbsp;it&nbsp;to&nbsp;FALSE.&lt;/p&gt;<a name="line_418"></a></li>
+<li id="line_419" class="odd"><span class="lineNumber">419&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&amp;gt;db-&amp;gt;having('user_id',&nbsp;&nbsp;45);&nbsp;&lt;br&nbsp;/&gt;<a name="line_419"></a></li>
+<li id="line_420" class="even"><span class="lineNumber">420&nbsp;</span>//&nbsp;Produces:&nbsp;HAVING&nbsp;`user_id`&nbsp;=&nbsp;45&nbsp;in&nbsp;some&nbsp;databases&nbsp;such&nbsp;as&nbsp;MySQL<a name="line_420"></a></li>
+<li id="line_421" class="odd"><span class="lineNumber">421&nbsp;</span>		&lt;br&nbsp;/&gt;<a name="line_421"></a></li>
+<li id="line_422" class="even"><span class="lineNumber">422&nbsp;</span>		$this-&amp;gt;db-&amp;gt;having('user_id',&nbsp;&nbsp;45,&nbsp;FALSE);&nbsp;&lt;br&nbsp;/&gt;<a name="line_422"></a></li>
+<li id="line_423" class="odd"><span class="lineNumber">423&nbsp;</span>//&nbsp;Produces:&nbsp;HAVING&nbsp;user_id&nbsp;=&nbsp;45&lt;/code&gt;&lt;/p&gt;<a name="line_423"></a></li>
+<li id="line_424" class="even"><span class="lineNumber">424&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;or_having();&lt;/h2&gt;<a name="line_424"></a></li>
+<li id="line_425" class="odd"><span class="lineNumber">425&nbsp;</span>&lt;p&gt;Identical&nbsp;to&nbsp;having(),&nbsp;only&nbsp;separates&nbsp;multiple&nbsp;clauses&nbsp;with&nbsp;&amp;quot;OR&amp;quot;.&lt;/p&gt;<a name="line_425"></a></li>
+<li id="line_426" class="even"><span class="lineNumber">426&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;order_by();&lt;/h2&gt;<a name="line_426"></a></li>
+<li id="line_427" class="odd"><span class="lineNumber">427&nbsp;</span>&lt;p&gt;Lets&nbsp;you&nbsp;set&nbsp;an&nbsp;ORDER&nbsp;BY&nbsp;clause.&nbsp;The&nbsp;first&nbsp;parameter&nbsp;contains&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;column&nbsp;you&nbsp;would&nbsp;like&nbsp;to&nbsp;order&nbsp;by.<a name="line_427"></a></li>
+<li id="line_428" class="even"><span class="lineNumber">428&nbsp;</span>The&nbsp;second&nbsp;parameter&nbsp;lets&nbsp;you&nbsp;set&nbsp;the&nbsp;direction&nbsp;of&nbsp;the&nbsp;result.&nbsp;&nbsp;Options&nbsp;are&nbsp;&lt;kbd&gt;asc&lt;/kbd&gt;&nbsp;or&nbsp;&lt;kbd&gt;desc&lt;/kbd&gt;,&nbsp;or&nbsp;&lt;kbd&gt;random&lt;/kbd&gt;.&nbsp;&lt;/p&gt;<a name="line_428"></a></li>
+<li id="line_429" class="odd"><span class="lineNumber">429&nbsp;</span><a name="line_429"></a></li>
+<li id="line_430" class="even"><span class="lineNumber">430&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;order_by("title",&nbsp;"desc");<a name="line_430"></a></li>
+<li id="line_431" class="odd"><span class="lineNumber">431&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_431"></a></li>
+<li id="line_432" class="even"><span class="lineNumber">432&nbsp;</span>&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;ORDER&nbsp;BY&nbsp;title&nbsp;DESC<a name="line_432"></a></li>
+<li id="line_433" class="odd"><span class="lineNumber">433&nbsp;</span>&lt;/code&gt;<a name="line_433"></a></li>
+<li id="line_434" class="even"><span class="lineNumber">434&nbsp;</span><a name="line_434"></a></li>
+<li id="line_435" class="odd"><span class="lineNumber">435&nbsp;</span>&lt;p&gt;You&nbsp;can&nbsp;also&nbsp;pass&nbsp;your&nbsp;own&nbsp;string&nbsp;in&nbsp;the&nbsp;first&nbsp;parameter:&lt;/p&gt;<a name="line_435"></a></li>
+<li id="line_436" class="even"><span class="lineNumber">436&nbsp;</span><a name="line_436"></a></li>
+<li id="line_437" class="odd"><span class="lineNumber">437&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;order_by('title&nbsp;desc,&nbsp;name&nbsp;asc');<a name="line_437"></a></li>
+<li id="line_438" class="even"><span class="lineNumber">438&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_438"></a></li>
+<li id="line_439" class="odd"><span class="lineNumber">439&nbsp;</span>&lt;br&nbsp;/&gt;//&nbsp;Produces:&nbsp;ORDER&nbsp;BY&nbsp;title&nbsp;DESC,&nbsp;name&nbsp;ASC<a name="line_439"></a></li>
+<li id="line_440" class="even"><span class="lineNumber">440&nbsp;</span>&lt;/code&gt;<a name="line_440"></a></li>
+<li id="line_441" class="odd"><span class="lineNumber">441&nbsp;</span><a name="line_441"></a></li>
+<li id="line_442" class="even"><span class="lineNumber">442&nbsp;</span>&lt;p&gt;Or&nbsp;multiple&nbsp;function&nbsp;calls&nbsp;can&nbsp;be&nbsp;made&nbsp;if&nbsp;you&nbsp;need&nbsp;multiple&nbsp;fields.&lt;/p&gt;<a name="line_442"></a></li>
+<li id="line_443" class="odd"><span class="lineNumber">443&nbsp;</span><a name="line_443"></a></li>
+<li id="line_444" class="even"><span class="lineNumber">444&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&gt;db-&gt;order_by("title",&nbsp;"desc");&lt;br&nbsp;/&gt;<a name="line_444"></a></li>
+<li id="line_445" class="odd"><span class="lineNumber">445&nbsp;</span>	$this-&gt;db-&gt;order_by("name",&nbsp;"asc");&nbsp;&lt;br&nbsp;/&gt;<a name="line_445"></a></li>
+<li id="line_446" class="even"><span class="lineNumber">446&nbsp;</span>	&lt;br&nbsp;/&gt;<a name="line_446"></a></li>
+<li id="line_447" class="odd"><span class="lineNumber">447&nbsp;</span>	//&nbsp;Produces:&nbsp;ORDER&nbsp;BY&nbsp;title&nbsp;DESC,&nbsp;name&nbsp;ASC<a name="line_447"></a></li>
+<li id="line_448" class="even"><span class="lineNumber">448&nbsp;</span>	&lt;/code&gt;&lt;/p&gt;<a name="line_448"></a></li>
+<li id="line_449" class="odd"><span class="lineNumber">449&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;order_by()&nbsp;was&nbsp;formerly&nbsp;known&nbsp;as&nbsp;orderby(),&nbsp;which&nbsp;has&nbsp;been&nbsp;removed.&lt;/p&gt;<a name="line_449"></a></li>
+<li id="line_450" class="even"><span class="lineNumber">450&nbsp;</span>&lt;p&nbsp;class="important"&gt;Note:&nbsp;random&nbsp;ordering&nbsp;is&nbsp;not&nbsp;currently&nbsp;supported&nbsp;in&nbsp;Oracle&nbsp;or&nbsp;MSSQL&nbsp;drivers.&nbsp;These&nbsp;will&nbsp;default&nbsp;to&nbsp;'ASC'.&lt;/p&gt;<a name="line_450"></a></li>
+<li id="line_451" class="odd"><span class="lineNumber">451&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;limit();&lt;/h2&gt;<a name="line_451"></a></li>
+<li id="line_452" class="even"><span class="lineNumber">452&nbsp;</span>&lt;p&gt;Lets&nbsp;you&nbsp;limit&nbsp;the&nbsp;number&nbsp;of&nbsp;rows&nbsp;you&nbsp;would&nbsp;like&nbsp;returned&nbsp;by&nbsp;the&nbsp;query:&lt;/p&gt;<a name="line_452"></a></li>
+<li id="line_453" class="odd"><span class="lineNumber">453&nbsp;</span><a name="line_453"></a></li>
+<li id="line_454" class="even"><span class="lineNumber">454&nbsp;</span>&lt;code&gt;<a name="line_454"></a></li>
+<li id="line_455" class="odd"><span class="lineNumber">455&nbsp;</span>$this-&gt;db-&gt;limit(10);&lt;br&nbsp;/&gt;<a name="line_455"></a></li>
+<li id="line_456" class="even"><span class="lineNumber">456&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_456"></a></li>
+<li id="line_457" class="odd"><span class="lineNumber">457&nbsp;</span>//&nbsp;Produces:&nbsp;LIMIT&nbsp;10&lt;/code&gt;<a name="line_457"></a></li>
+<li id="line_458" class="even"><span class="lineNumber">458&nbsp;</span><a name="line_458"></a></li>
+<li id="line_459" class="odd"><span class="lineNumber">459&nbsp;</span><a name="line_459"></a></li>
+<li id="line_460" class="even"><span class="lineNumber">460&nbsp;</span>&lt;p&gt;The&nbsp;second&nbsp;parameter&nbsp;lets&nbsp;you&nbsp;set&nbsp;a&nbsp;result&nbsp;offset.&lt;/p&gt;<a name="line_460"></a></li>
+<li id="line_461" class="odd"><span class="lineNumber">461&nbsp;</span><a name="line_461"></a></li>
+<li id="line_462" class="even"><span class="lineNumber">462&nbsp;</span>&lt;code&gt;<a name="line_462"></a></li>
+<li id="line_463" class="odd"><span class="lineNumber">463&nbsp;</span>$this-&gt;db-&gt;limit(10,&nbsp;20);&lt;br&nbsp;/&gt;<a name="line_463"></a></li>
+<li id="line_464" class="even"><span class="lineNumber">464&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_464"></a></li>
+<li id="line_465" class="odd"><span class="lineNumber">465&nbsp;</span>//&nbsp;Produces:&nbsp;LIMIT&nbsp;20,&nbsp;10&nbsp;(in&nbsp;MySQL.&nbsp;&nbsp;Other&nbsp;databases&nbsp;have&nbsp;slightly&nbsp;different&nbsp;syntax)&lt;/code&gt;<a name="line_465"></a></li>
+<li id="line_466" class="even"><span class="lineNumber">466&nbsp;</span><a name="line_466"></a></li>
+<li id="line_467" class="odd"><span class="lineNumber">467&nbsp;</span><a name="line_467"></a></li>
+<li id="line_468" class="even"><span class="lineNumber">468&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;count_all_results();&lt;/h2&gt;<a name="line_468"></a></li>
+<li id="line_469" class="odd"><span class="lineNumber">469&nbsp;</span><a name="line_469"></a></li>
+<li id="line_470" class="even"><span class="lineNumber">470&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;determine&nbsp;the&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;a&nbsp;particular&nbsp;Active&nbsp;Record&nbsp;query.&nbsp;Queries&nbsp;will&nbsp;accept&nbsp;Active&nbsp;Record&nbsp;restrictors&nbsp;such&nbsp;as&nbsp;where(),&nbsp;&nbsp;or_where(),&nbsp;like(),&nbsp;or_like(),&nbsp;etc.&nbsp;Example:&lt;/p&gt;<a name="line_470"></a></li>
+<li id="line_471" class="odd"><span class="lineNumber">471&nbsp;</span>&lt;code&gt;echo&nbsp;$this-&gt;db-&gt;count_all_results('&lt;var&gt;my_table&lt;/var&gt;');&lt;br&nbsp;/&gt;<a name="line_471"></a></li>
+<li id="line_472" class="even"><span class="lineNumber">472&nbsp;</span><a name="line_472"></a></li>
+<li id="line_473" class="odd"><span class="lineNumber">473&nbsp;</span>//&nbsp;Produces&nbsp;an&nbsp;integer,&nbsp;like&nbsp;25&lt;br&nbsp;/&gt;<a name="line_473"></a></li>
+<li id="line_474" class="even"><span class="lineNumber">474&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_474"></a></li>
+<li id="line_475" class="odd"><span class="lineNumber">475&nbsp;</span>$this-&amp;gt;db-&amp;gt;like('title',&nbsp;'match');&lt;br&nbsp;/&gt;<a name="line_475"></a></li>
+<li id="line_476" class="even"><span class="lineNumber">476&nbsp;</span>$this-&amp;gt;db-&amp;gt;from('&lt;var&gt;my_table&lt;/var&gt;');&lt;br&nbsp;/&gt;<a name="line_476"></a></li>
+<li id="line_477" class="odd"><span class="lineNumber">477&nbsp;</span>echo&nbsp;$this-&amp;gt;db-&amp;gt;count_all_results();&lt;br&nbsp;/&gt;<a name="line_477"></a></li>
+<li id="line_478" class="even"><span class="lineNumber">478&nbsp;</span>//&nbsp;Produces&nbsp;an&nbsp;integer,&nbsp;like&nbsp;17&nbsp;&lt;/code&gt;<a name="line_478"></a></li>
+<li id="line_479" class="odd"><span class="lineNumber">479&nbsp;</span><a name="line_479"></a></li>
+<li id="line_480" class="even"><span class="lineNumber">480&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;count_all();&lt;/h2&gt;<a name="line_480"></a></li>
+<li id="line_481" class="odd"><span class="lineNumber">481&nbsp;</span><a name="line_481"></a></li>
+<li id="line_482" class="even"><span class="lineNumber">482&nbsp;</span>&lt;p&gt;Permits&nbsp;you&nbsp;to&nbsp;determine&nbsp;the&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;a&nbsp;particular&nbsp;table.&nbsp;&nbsp;Submit&nbsp;the&nbsp;table&nbsp;name&nbsp;in&nbsp;the&nbsp;first&nbsp;parameter.&nbsp;Example:&lt;/p&gt;<a name="line_482"></a></li>
+<li id="line_483" class="odd"><span class="lineNumber">483&nbsp;</span><a name="line_483"></a></li>
+<li id="line_484" class="even"><span class="lineNumber">484&nbsp;</span>&lt;code&gt;echo&nbsp;$this-&gt;db-&gt;count_all('&lt;var&gt;my_table&lt;/var&gt;');&lt;br&nbsp;/&gt;<a name="line_484"></a></li>
+<li id="line_485" class="odd"><span class="lineNumber">485&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_485"></a></li>
+<li id="line_486" class="even"><span class="lineNumber">486&nbsp;</span>//&nbsp;Produces&nbsp;an&nbsp;integer,&nbsp;like&nbsp;25&lt;/code&gt;<a name="line_486"></a></li>
+<li id="line_487" class="odd"><span class="lineNumber">487&nbsp;</span><a name="line_487"></a></li>
+<li id="line_488" class="even"><span class="lineNumber">488&nbsp;</span><a name="line_488"></a></li>
+<li id="line_489" class="odd"><span class="lineNumber">489&nbsp;</span><a name="line_489"></a></li>
+<li id="line_490" class="even"><span class="lineNumber">490&nbsp;</span>&lt;a&nbsp;name="insert"&gt;&amp;nbsp;&lt;/a&gt;<a name="line_490"></a></li>
+<li id="line_491" class="odd"><span class="lineNumber">491&nbsp;</span>&lt;h1&gt;Inserting&nbsp;Data&lt;/h1&gt;<a name="line_491"></a></li>
+<li id="line_492" class="even"><span class="lineNumber">492&nbsp;</span><a name="line_492"></a></li>
+<li id="line_493" class="odd"><span class="lineNumber">493&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;insert();&lt;/h2&gt;<a name="line_493"></a></li>
+<li id="line_494" class="even"><span class="lineNumber">494&nbsp;</span>&lt;p&gt;Generates&nbsp;an&nbsp;insert&nbsp;string&nbsp;based&nbsp;on&nbsp;the&nbsp;data&nbsp;you&nbsp;supply,&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&nbsp;You&nbsp;can&nbsp;either&nbsp;pass&nbsp;an<a name="line_494"></a></li>
+<li id="line_495" class="odd"><span class="lineNumber">495&nbsp;</span>&lt;strong&gt;array&lt;/strong&gt;&nbsp;or&nbsp;an&nbsp;&lt;strong&gt;object&lt;/strong&gt;&nbsp;to&nbsp;the&nbsp;function.&nbsp;&nbsp;Here&nbsp;is&nbsp;an&nbsp;example&nbsp;using&nbsp;an&nbsp;array:&lt;/p&gt;<a name="line_495"></a></li>
+<li id="line_496" class="even"><span class="lineNumber">496&nbsp;</span><a name="line_496"></a></li>
+<li id="line_497" class="odd"><span class="lineNumber">497&nbsp;</span>&lt;code&gt;<a name="line_497"></a></li>
+<li id="line_498" class="even"><span class="lineNumber">498&nbsp;</span>$data&nbsp;=&nbsp;array(&lt;br&nbsp;/&gt;<a name="line_498"></a></li>
+<li id="line_499" class="odd"><span class="lineNumber">499&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;'My&nbsp;title'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_499"></a></li>
+<li id="line_500" class="even"><span class="lineNumber">500&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;'My&nbsp;Name'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_500"></a></li>
+<li id="line_501" class="odd"><span class="lineNumber">501&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;'My&nbsp;date'&lt;br&nbsp;/&gt;<a name="line_501"></a></li>
+<li id="line_502" class="even"><span class="lineNumber">502&nbsp;</span>);&lt;br&nbsp;/&gt;<a name="line_502"></a></li>
+<li id="line_503" class="odd"><span class="lineNumber">503&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_503"></a></li>
+<li id="line_504" class="even"><span class="lineNumber">504&nbsp;</span>$this-&gt;db-&gt;insert('mytable',&nbsp;$data);<a name="line_504"></a></li>
+<li id="line_505" class="odd"><span class="lineNumber">505&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_505"></a></li>
+<li id="line_506" class="even"><span class="lineNumber">506&nbsp;</span>//&nbsp;Produces:&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(title,&nbsp;name,&nbsp;date)&nbsp;VALUES&nbsp;('My&nbsp;title',&nbsp;'My&nbsp;name',&nbsp;'My&nbsp;date')&lt;/code&gt;<a name="line_506"></a></li>
+<li id="line_507" class="odd"><span class="lineNumber">507&nbsp;</span><a name="line_507"></a></li>
+<li id="line_508" class="even"><span class="lineNumber">508&nbsp;</span>&lt;p&gt;The&nbsp;first&nbsp;parameter&nbsp;will&nbsp;contain&nbsp;the&nbsp;table&nbsp;name,&nbsp;the&nbsp;second&nbsp;is&nbsp;an&nbsp;associative&nbsp;array&nbsp;of&nbsp;values.&lt;/p&gt;<a name="line_508"></a></li>
+<li id="line_509" class="odd"><span class="lineNumber">509&nbsp;</span><a name="line_509"></a></li>
+<li id="line_510" class="even"><span class="lineNumber">510&nbsp;</span>&lt;p&gt;Here&nbsp;is&nbsp;an&nbsp;example&nbsp;using&nbsp;an&nbsp;object:&lt;/p&gt;<a name="line_510"></a></li>
+<li id="line_511" class="odd"><span class="lineNumber">511&nbsp;</span><a name="line_511"></a></li>
+<li id="line_512" class="even"><span class="lineNumber">512&nbsp;</span>&lt;code&gt;<a name="line_512"></a></li>
+<li id="line_513" class="odd"><span class="lineNumber">513&nbsp;</span>/*&lt;br&nbsp;/&gt;<a name="line_513"></a></li>
+<li id="line_514" class="even"><span class="lineNumber">514&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;class&nbsp;Myclass&nbsp;{&lt;br&nbsp;/&gt;<a name="line_514"></a></li>
+<li id="line_515" class="odd"><span class="lineNumber">515&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$title&nbsp;=&nbsp;'My&nbsp;Title';&lt;br&nbsp;/&gt;<a name="line_515"></a></li>
+<li id="line_516" class="even"><span class="lineNumber">516&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$content&nbsp;=&nbsp;'My&nbsp;Content';&lt;br&nbsp;/&gt;<a name="line_516"></a></li>
+<li id="line_517" class="odd"><span class="lineNumber">517&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$date&nbsp;=&nbsp;'My&nbsp;Date';&lt;br&nbsp;/&gt;<a name="line_517"></a></li>
+<li id="line_518" class="even"><span class="lineNumber">518&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;br&nbsp;/&gt;<a name="line_518"></a></li>
+<li id="line_519" class="odd"><span class="lineNumber">519&nbsp;</span>*/&lt;br&nbsp;/&gt;<a name="line_519"></a></li>
+<li id="line_520" class="even"><span class="lineNumber">520&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_520"></a></li>
+<li id="line_521" class="odd"><span class="lineNumber">521&nbsp;</span>$object&nbsp;=&nbsp;new&nbsp;Myclass;&lt;br&nbsp;/&gt;<a name="line_521"></a></li>
+<li id="line_522" class="even"><span class="lineNumber">522&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_522"></a></li>
+<li id="line_523" class="odd"><span class="lineNumber">523&nbsp;</span>$this-&gt;db-&gt;insert('mytable',&nbsp;$object);<a name="line_523"></a></li>
+<li id="line_524" class="even"><span class="lineNumber">524&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_524"></a></li>
+<li id="line_525" class="odd"><span class="lineNumber">525&nbsp;</span>//&nbsp;Produces:&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(title,&nbsp;content,&nbsp;date)&nbsp;VALUES&nbsp;('My&nbsp;Title',&nbsp;'My&nbsp;Content',&nbsp;'My&nbsp;Date')&lt;/code&gt;<a name="line_525"></a></li>
+<li id="line_526" class="even"><span class="lineNumber">526&nbsp;</span><a name="line_526"></a></li>
+<li id="line_527" class="odd"><span class="lineNumber">527&nbsp;</span>&lt;p&gt;The&nbsp;first&nbsp;parameter&nbsp;will&nbsp;contain&nbsp;the&nbsp;table&nbsp;name,&nbsp;the&nbsp;second&nbsp;is&nbsp;an&nbsp;object.&lt;/p&gt;<a name="line_527"></a></li>
+<li id="line_528" class="even"><span class="lineNumber">528&nbsp;</span><a name="line_528"></a></li>
+<li id="line_529" class="odd"><span class="lineNumber">529&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;are&nbsp;escaped&nbsp;automatically&nbsp;producing&nbsp;safer&nbsp;queries.&lt;/p&gt;<a name="line_529"></a></li>
+<li id="line_530" class="even"><span class="lineNumber">530&nbsp;</span><a name="line_530"></a></li>
+<li id="line_531" class="odd"><span class="lineNumber">531&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;insert_batch();&lt;/h2&gt;<a name="line_531"></a></li>
+<li id="line_532" class="even"><span class="lineNumber">532&nbsp;</span>&lt;p&gt;Generates&nbsp;an&nbsp;insert&nbsp;string&nbsp;based&nbsp;on&nbsp;the&nbsp;data&nbsp;you&nbsp;supply,&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&nbsp;You&nbsp;can&nbsp;either&nbsp;pass&nbsp;an<a name="line_532"></a></li>
+<li id="line_533" class="odd"><span class="lineNumber">533&nbsp;</span>&lt;strong&gt;array&lt;/strong&gt;&nbsp;or&nbsp;an&nbsp;&lt;strong&gt;object&lt;/strong&gt;&nbsp;to&nbsp;the&nbsp;function.&nbsp;&nbsp;Here&nbsp;is&nbsp;an&nbsp;example&nbsp;using&nbsp;an&nbsp;array:&lt;/p&gt;<a name="line_533"></a></li>
+<li id="line_534" class="even"><span class="lineNumber">534&nbsp;</span><a name="line_534"></a></li>
+<li id="line_535" class="odd"><span class="lineNumber">535&nbsp;</span>&lt;code&gt;<a name="line_535"></a></li>
+<li id="line_536" class="even"><span class="lineNumber">536&nbsp;</span>$data&nbsp;=&nbsp;array(&lt;br/&gt;<a name="line_536"></a></li>
+<li id="line_537" class="odd"><span class="lineNumber">537&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;array(&lt;br&nbsp;/&gt;<a name="line_537"></a></li>
+<li id="line_538" class="even"><span class="lineNumber">538&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;'My&nbsp;title'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_538"></a></li>
+<li id="line_539" class="odd"><span class="lineNumber">539&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;'My&nbsp;Name'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_539"></a></li>
+<li id="line_540" class="even"><span class="lineNumber">540&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;'My&nbsp;date'&lt;br&nbsp;/&gt;<a name="line_540"></a></li>
+<li id="line_541" class="odd"><span class="lineNumber">541&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;),&lt;br&nbsp;/&gt;<a name="line_541"></a></li>
+<li id="line_542" class="even"><span class="lineNumber">542&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;array(&lt;br&nbsp;/&gt;<a name="line_542"></a></li>
+<li id="line_543" class="odd"><span class="lineNumber">543&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;'Another&nbsp;title'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_543"></a></li>
+<li id="line_544" class="even"><span class="lineNumber">544&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;'Another&nbsp;Name'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_544"></a></li>
+<li id="line_545" class="odd"><span class="lineNumber">545&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;'Another&nbsp;date'&lt;br&nbsp;/&gt;<a name="line_545"></a></li>
+<li id="line_546" class="even"><span class="lineNumber">546&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;)&lt;br/&gt;<a name="line_546"></a></li>
+<li id="line_547" class="odd"><span class="lineNumber">547&nbsp;</span>);&lt;br&nbsp;/&gt;<a name="line_547"></a></li>
+<li id="line_548" class="even"><span class="lineNumber">548&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_548"></a></li>
+<li id="line_549" class="odd"><span class="lineNumber">549&nbsp;</span>$this-&gt;db-&gt;insert_batch('mytable',&nbsp;$data);<a name="line_549"></a></li>
+<li id="line_550" class="even"><span class="lineNumber">550&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_550"></a></li>
+<li id="line_551" class="odd"><span class="lineNumber">551&nbsp;</span>//&nbsp;Produces:&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(title,&nbsp;name,&nbsp;date)&nbsp;VALUES&nbsp;('My&nbsp;title',&nbsp;'My&nbsp;name',&nbsp;'My&nbsp;date'),&nbsp;&nbsp;('Another&nbsp;title',&nbsp;'Another&nbsp;name',&nbsp;'Another&nbsp;date')&lt;/code&gt;<a name="line_551"></a></li>
+<li id="line_552" class="even"><span class="lineNumber">552&nbsp;</span><a name="line_552"></a></li>
+<li id="line_553" class="odd"><span class="lineNumber">553&nbsp;</span>&lt;p&gt;The&nbsp;first&nbsp;parameter&nbsp;will&nbsp;contain&nbsp;the&nbsp;table&nbsp;name,&nbsp;the&nbsp;second&nbsp;is&nbsp;an&nbsp;associative&nbsp;array&nbsp;of&nbsp;values.&lt;/p&gt;<a name="line_553"></a></li>
+<li id="line_554" class="even"><span class="lineNumber">554&nbsp;</span><a name="line_554"></a></li>
+<li id="line_555" class="odd"><span class="lineNumber">555&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;are&nbsp;escaped&nbsp;automatically&nbsp;producing&nbsp;safer&nbsp;queries.&lt;/p&gt;<a name="line_555"></a></li>
+<li id="line_556" class="even"><span class="lineNumber">556&nbsp;</span><a name="line_556"></a></li>
+<li id="line_557" class="odd"><span class="lineNumber">557&nbsp;</span><a name="line_557"></a></li>
+<li id="line_558" class="even"><span class="lineNumber">558&nbsp;</span><a name="line_558"></a></li>
+<li id="line_559" class="odd"><span class="lineNumber">559&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;set();&lt;/h2&gt;<a name="line_559"></a></li>
+<li id="line_560" class="even"><span class="lineNumber">560&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;enables&nbsp;you&nbsp;to&nbsp;set&nbsp;values&nbsp;for&nbsp;&lt;dfn&gt;inserts&lt;/dfn&gt;&nbsp;or&nbsp;&lt;dfn&gt;updates&lt;/dfn&gt;.&lt;/p&gt;<a name="line_560"></a></li>
+<li id="line_561" class="odd"><span class="lineNumber">561&nbsp;</span><a name="line_561"></a></li>
+<li id="line_562" class="even"><span class="lineNumber">562&nbsp;</span>&lt;p&gt;&lt;strong&gt;It&nbsp;can&nbsp;be&nbsp;used&nbsp;instead&nbsp;of&nbsp;passing&nbsp;a&nbsp;data&nbsp;array&nbsp;directly&nbsp;to&nbsp;the&nbsp;insert&nbsp;or&nbsp;update&nbsp;functions:&lt;/strong&gt;&nbsp;&lt;/p&gt;<a name="line_562"></a></li>
+<li id="line_563" class="odd"><span class="lineNumber">563&nbsp;</span><a name="line_563"></a></li>
+<li id="line_564" class="even"><span class="lineNumber">564&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;set('name',&nbsp;$name);<a name="line_564"></a></li>
+<li id="line_565" class="odd"><span class="lineNumber">565&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_565"></a></li>
+<li id="line_566" class="even"><span class="lineNumber">566&nbsp;</span>$this-&gt;db-&gt;insert('mytable');<a name="line_566"></a></li>
+<li id="line_567" class="odd"><span class="lineNumber">567&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_567"></a></li>
+<li id="line_568" class="even"><span class="lineNumber">568&nbsp;</span>//&nbsp;Produces:&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(name)&nbsp;VALUES&nbsp;('{$name}')&lt;/code&gt;<a name="line_568"></a></li>
+<li id="line_569" class="odd"><span class="lineNumber">569&nbsp;</span><a name="line_569"></a></li>
+<li id="line_570" class="even"><span class="lineNumber">570&nbsp;</span>&lt;p&gt;If&nbsp;you&nbsp;use&nbsp;multiple&nbsp;function&nbsp;called&nbsp;they&nbsp;will&nbsp;be&nbsp;assembled&nbsp;properly&nbsp;based&nbsp;on&nbsp;whether&nbsp;you&nbsp;are&nbsp;doing&nbsp;an&nbsp;insert&nbsp;or&nbsp;an&nbsp;update:&lt;/p&gt;<a name="line_570"></a></li>
+<li id="line_571" class="odd"><span class="lineNumber">571&nbsp;</span><a name="line_571"></a></li>
+<li id="line_572" class="even"><span class="lineNumber">572&nbsp;</span>&lt;code&gt;$this-&amp;gt;db-&amp;gt;set('name',&nbsp;$name);&lt;br&nbsp;/&gt;<a name="line_572"></a></li>
+<li id="line_573" class="odd"><span class="lineNumber">573&nbsp;</span>$this-&amp;gt;db-&amp;gt;set('title',&nbsp;$title);&lt;br&nbsp;/&gt;<a name="line_573"></a></li>
+<li id="line_574" class="even"><span class="lineNumber">574&nbsp;</span>$this-&amp;gt;db-&amp;gt;set('status',&nbsp;$status);&lt;br&nbsp;/&gt;<a name="line_574"></a></li>
+<li id="line_575" class="odd"><span class="lineNumber">575&nbsp;</span>$this-&amp;gt;db-&amp;gt;insert('mytable');&nbsp;&lt;/code&gt;<a name="line_575"></a></li>
+<li id="line_576" class="even"><span class="lineNumber">576&nbsp;</span>&lt;p&gt;&lt;strong&gt;set()&lt;/strong&gt;&nbsp;will&nbsp;also&nbsp;accept&nbsp;an&nbsp;optional&nbsp;third&nbsp;parameter&nbsp;($escape),&nbsp;that&nbsp;will&nbsp;prevent&nbsp;data&nbsp;from&nbsp;being&nbsp;escaped&nbsp;if&nbsp;set&nbsp;to&nbsp;FALSE.&nbsp;To&nbsp;illustrate&nbsp;the&nbsp;difference,&nbsp;here&nbsp;is&nbsp;set()&nbsp;used&nbsp;both&nbsp;with&nbsp;and&nbsp;without&nbsp;the&nbsp;escape&nbsp;parameter.&lt;/p&gt;<a name="line_576"></a></li>
+<li id="line_577" class="odd"><span class="lineNumber">577&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&amp;gt;db-&amp;gt;set('field',&nbsp;'field+1',&nbsp;FALSE);&lt;br&nbsp;/&gt;<a name="line_577"></a></li>
+<li id="line_578" class="even"><span class="lineNumber">578&nbsp;</span>	$this-&amp;gt;db-&amp;gt;insert('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_578"></a></li>
+<li id="line_579" class="odd"><span class="lineNumber">579&nbsp;</span>	//&nbsp;gives&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(field)&nbsp;VALUES&nbsp;(field+1)&lt;br&nbsp;/&gt;<a name="line_579"></a></li>
+<li id="line_580" class="even"><span class="lineNumber">580&nbsp;</span>	&lt;br&nbsp;/&gt;<a name="line_580"></a></li>
+<li id="line_581" class="odd"><span class="lineNumber">581&nbsp;</span>	$this-&amp;gt;db-&amp;gt;set('field',&nbsp;'field+1');&lt;br&nbsp;/&gt;<a name="line_581"></a></li>
+<li id="line_582" class="even"><span class="lineNumber">582&nbsp;</span>	$this-&amp;gt;db-&amp;gt;insert('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_582"></a></li>
+<li id="line_583" class="odd"><span class="lineNumber">583&nbsp;</span>	//&nbsp;gives&nbsp;INSERT&nbsp;INTO&nbsp;mytable&nbsp;(field)&nbsp;VALUES&nbsp;('field+1')&lt;/code&gt;&lt;/p&gt;<a name="line_583"></a></li>
+<li id="line_584" class="even"><span class="lineNumber">584&nbsp;</span>&lt;p&gt;You&nbsp;can&nbsp;also&nbsp;pass&nbsp;an&nbsp;associative&nbsp;array&nbsp;to&nbsp;this&nbsp;function:&lt;/p&gt;<a name="line_584"></a></li>
+<li id="line_585" class="odd"><span class="lineNumber">585&nbsp;</span>&lt;code&gt;<a name="line_585"></a></li>
+<li id="line_586" class="even"><span class="lineNumber">586&nbsp;</span>$array&nbsp;=&nbsp;array('name'&nbsp;=&gt;&nbsp;$name,&nbsp;'title'&nbsp;=&gt;&nbsp;$title,&nbsp;'status'&nbsp;=&gt;&nbsp;$status);&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_586"></a></li>
+<li id="line_587" class="odd"><span class="lineNumber">587&nbsp;</span><a name="line_587"></a></li>
+<li id="line_588" class="even"><span class="lineNumber">588&nbsp;</span>$this-&gt;db-&gt;set($array);&lt;br&nbsp;/&gt;<a name="line_588"></a></li>
+<li id="line_589" class="odd"><span class="lineNumber">589&nbsp;</span>$this-&gt;db-&gt;insert('mytable');<a name="line_589"></a></li>
+<li id="line_590" class="even"><span class="lineNumber">590&nbsp;</span>&lt;/code&gt;<a name="line_590"></a></li>
+<li id="line_591" class="odd"><span class="lineNumber">591&nbsp;</span><a name="line_591"></a></li>
+<li id="line_592" class="even"><span class="lineNumber">592&nbsp;</span>&lt;p&gt;Or&nbsp;an&nbsp;object:&lt;/p&gt;<a name="line_592"></a></li>
+<li id="line_593" class="odd"><span class="lineNumber">593&nbsp;</span><a name="line_593"></a></li>
+<li id="line_594" class="even"><span class="lineNumber">594&nbsp;</span><a name="line_594"></a></li>
+<li id="line_595" class="odd"><span class="lineNumber">595&nbsp;</span>&lt;code&gt;<a name="line_595"></a></li>
+<li id="line_596" class="even"><span class="lineNumber">596&nbsp;</span>/*&lt;br&nbsp;/&gt;<a name="line_596"></a></li>
+<li id="line_597" class="odd"><span class="lineNumber">597&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;class&nbsp;Myclass&nbsp;{&lt;br&nbsp;/&gt;<a name="line_597"></a></li>
+<li id="line_598" class="even"><span class="lineNumber">598&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$title&nbsp;=&nbsp;'My&nbsp;Title';&lt;br&nbsp;/&gt;<a name="line_598"></a></li>
+<li id="line_599" class="odd"><span class="lineNumber">599&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$content&nbsp;=&nbsp;'My&nbsp;Content';&lt;br&nbsp;/&gt;<a name="line_599"></a></li>
+<li id="line_600" class="even"><span class="lineNumber">600&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$date&nbsp;=&nbsp;'My&nbsp;Date';&lt;br&nbsp;/&gt;<a name="line_600"></a></li>
+<li id="line_601" class="odd"><span class="lineNumber">601&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;br&nbsp;/&gt;<a name="line_601"></a></li>
+<li id="line_602" class="even"><span class="lineNumber">602&nbsp;</span>*/&lt;br&nbsp;/&gt;<a name="line_602"></a></li>
+<li id="line_603" class="odd"><span class="lineNumber">603&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_603"></a></li>
+<li id="line_604" class="even"><span class="lineNumber">604&nbsp;</span>$object&nbsp;=&nbsp;new&nbsp;Myclass;&lt;br&nbsp;/&gt;<a name="line_604"></a></li>
+<li id="line_605" class="odd"><span class="lineNumber">605&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_605"></a></li>
+<li id="line_606" class="even"><span class="lineNumber">606&nbsp;</span>$this-&gt;db-&gt;set($object);&lt;br&nbsp;/&gt;<a name="line_606"></a></li>
+<li id="line_607" class="odd"><span class="lineNumber">607&nbsp;</span>$this-&gt;db-&gt;insert('mytable');<a name="line_607"></a></li>
+<li id="line_608" class="even"><span class="lineNumber">608&nbsp;</span>&lt;/code&gt;<a name="line_608"></a></li>
+<li id="line_609" class="odd"><span class="lineNumber">609&nbsp;</span><a name="line_609"></a></li>
+<li id="line_610" class="even"><span class="lineNumber">610&nbsp;</span><a name="line_610"></a></li>
+<li id="line_611" class="odd"><span class="lineNumber">611&nbsp;</span><a name="line_611"></a></li>
+<li id="line_612" class="even"><span class="lineNumber">612&nbsp;</span>&lt;a&nbsp;name="update"&gt;&amp;nbsp;&lt;/a&gt;<a name="line_612"></a></li>
+<li id="line_613" class="odd"><span class="lineNumber">613&nbsp;</span>&lt;h1&gt;Updating&nbsp;Data&lt;/h1&gt;<a name="line_613"></a></li>
+<li id="line_614" class="even"><span class="lineNumber">614&nbsp;</span><a name="line_614"></a></li>
+<li id="line_615" class="odd"><span class="lineNumber">615&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;update();&lt;/h2&gt;<a name="line_615"></a></li>
+<li id="line_616" class="even"><span class="lineNumber">616&nbsp;</span>&lt;p&gt;Generates&nbsp;an&nbsp;update&nbsp;string&nbsp;and&nbsp;runs&nbsp;the&nbsp;query&nbsp;based&nbsp;on&nbsp;the&nbsp;data&nbsp;you&nbsp;supply.&nbsp;&nbsp;You&nbsp;can&nbsp;pass&nbsp;an<a name="line_616"></a></li>
+<li id="line_617" class="odd"><span class="lineNumber">617&nbsp;</span>&lt;strong&gt;array&lt;/strong&gt;&nbsp;or&nbsp;an&nbsp;&lt;strong&gt;object&lt;/strong&gt;&nbsp;to&nbsp;the&nbsp;function.&nbsp;Here&nbsp;is&nbsp;an&nbsp;example&nbsp;using<a name="line_617"></a></li>
+<li id="line_618" class="even"><span class="lineNumber">618&nbsp;</span>an&nbsp;array:&lt;/p&gt;<a name="line_618"></a></li>
+<li id="line_619" class="odd"><span class="lineNumber">619&nbsp;</span><a name="line_619"></a></li>
+<li id="line_620" class="even"><span class="lineNumber">620&nbsp;</span>&lt;code&gt;<a name="line_620"></a></li>
+<li id="line_621" class="odd"><span class="lineNumber">621&nbsp;</span>$data&nbsp;=&nbsp;array(&lt;br&nbsp;/&gt;<a name="line_621"></a></li>
+<li id="line_622" class="even"><span class="lineNumber">622&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;$title,&lt;br&nbsp;/&gt;<a name="line_622"></a></li>
+<li id="line_623" class="odd"><span class="lineNumber">623&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;$name,&lt;br&nbsp;/&gt;<a name="line_623"></a></li>
+<li id="line_624" class="even"><span class="lineNumber">624&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;$date&lt;br&nbsp;/&gt;<a name="line_624"></a></li>
+<li id="line_625" class="odd"><span class="lineNumber">625&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;);&lt;br&nbsp;/&gt;<a name="line_625"></a></li>
+<li id="line_626" class="even"><span class="lineNumber">626&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_626"></a></li>
+<li id="line_627" class="odd"><span class="lineNumber">627&nbsp;</span>$this-&gt;db-&gt;where('id',&nbsp;$id);&lt;br&nbsp;/&gt;<a name="line_627"></a></li>
+<li id="line_628" class="even"><span class="lineNumber">628&nbsp;</span>$this-&gt;db-&gt;update('mytable',&nbsp;$data);<a name="line_628"></a></li>
+<li id="line_629" class="odd"><span class="lineNumber">629&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_629"></a></li>
+<li id="line_630" class="even"><span class="lineNumber">630&nbsp;</span>//&nbsp;Produces:&lt;br&nbsp;/&gt;<a name="line_630"></a></li>
+<li id="line_631" class="odd"><span class="lineNumber">631&nbsp;</span>//&nbsp;UPDATE&nbsp;mytable&nbsp;&lt;br&nbsp;/&gt;<a name="line_631"></a></li>
+<li id="line_632" class="even"><span class="lineNumber">632&nbsp;</span>//&nbsp;SET&nbsp;title&nbsp;=&nbsp;'{$title}',&nbsp;name&nbsp;=&nbsp;'{$name}',&nbsp;date&nbsp;=&nbsp;'{$date}'&lt;br&nbsp;/&gt;<a name="line_632"></a></li>
+<li id="line_633" class="odd"><span class="lineNumber">633&nbsp;</span>//&nbsp;WHERE&nbsp;id&nbsp;=&nbsp;$id&lt;/code&gt;<a name="line_633"></a></li>
+<li id="line_634" class="even"><span class="lineNumber">634&nbsp;</span><a name="line_634"></a></li>
+<li id="line_635" class="odd"><span class="lineNumber">635&nbsp;</span>&lt;p&gt;Or&nbsp;you&nbsp;can&nbsp;supply&nbsp;an&nbsp;object:&lt;/p&gt;<a name="line_635"></a></li>
+<li id="line_636" class="even"><span class="lineNumber">636&nbsp;</span><a name="line_636"></a></li>
+<li id="line_637" class="odd"><span class="lineNumber">637&nbsp;</span>&lt;code&gt;<a name="line_637"></a></li>
+<li id="line_638" class="even"><span class="lineNumber">638&nbsp;</span>/*&lt;br&nbsp;/&gt;<a name="line_638"></a></li>
+<li id="line_639" class="odd"><span class="lineNumber">639&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;class&nbsp;Myclass&nbsp;{&lt;br&nbsp;/&gt;<a name="line_639"></a></li>
+<li id="line_640" class="even"><span class="lineNumber">640&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$title&nbsp;=&nbsp;'My&nbsp;Title';&lt;br&nbsp;/&gt;<a name="line_640"></a></li>
+<li id="line_641" class="odd"><span class="lineNumber">641&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$content&nbsp;=&nbsp;'My&nbsp;Content';&lt;br&nbsp;/&gt;<a name="line_641"></a></li>
+<li id="line_642" class="even"><span class="lineNumber">642&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;var&nbsp;&nbsp;$date&nbsp;=&nbsp;'My&nbsp;Date';&lt;br&nbsp;/&gt;<a name="line_642"></a></li>
+<li id="line_643" class="odd"><span class="lineNumber">643&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;br&nbsp;/&gt;<a name="line_643"></a></li>
+<li id="line_644" class="even"><span class="lineNumber">644&nbsp;</span>*/&lt;br&nbsp;/&gt;<a name="line_644"></a></li>
+<li id="line_645" class="odd"><span class="lineNumber">645&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_645"></a></li>
+<li id="line_646" class="even"><span class="lineNumber">646&nbsp;</span>$object&nbsp;=&nbsp;new&nbsp;Myclass;&lt;br&nbsp;/&gt;<a name="line_646"></a></li>
+<li id="line_647" class="odd"><span class="lineNumber">647&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_647"></a></li>
+<li id="line_648" class="even"><span class="lineNumber">648&nbsp;</span>$this-&gt;db-&gt;where('id',&nbsp;$id);&lt;br&nbsp;/&gt;<a name="line_648"></a></li>
+<li id="line_649" class="odd"><span class="lineNumber">649&nbsp;</span>$this-&gt;db-&gt;update('mytable',&nbsp;$object);<a name="line_649"></a></li>
+<li id="line_650" class="even"><span class="lineNumber">650&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_650"></a></li>
+<li id="line_651" class="odd"><span class="lineNumber">651&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_651"></a></li>
+<li id="line_652" class="even"><span class="lineNumber">652&nbsp;</span>//&nbsp;Produces:&lt;br&nbsp;/&gt;<a name="line_652"></a></li>
+<li id="line_653" class="odd"><span class="lineNumber">653&nbsp;</span>//&nbsp;UPDATE&nbsp;mytable&nbsp;&lt;br&nbsp;/&gt;<a name="line_653"></a></li>
+<li id="line_654" class="even"><span class="lineNumber">654&nbsp;</span>//&nbsp;SET&nbsp;title&nbsp;=&nbsp;'{$title}',&nbsp;name&nbsp;=&nbsp;'{$name}',&nbsp;date&nbsp;=&nbsp;'{$date}'&lt;br&nbsp;/&gt;<a name="line_654"></a></li>
+<li id="line_655" class="odd"><span class="lineNumber">655&nbsp;</span>//&nbsp;WHERE&nbsp;id&nbsp;=&nbsp;$id&lt;/code&gt;<a name="line_655"></a></li>
+<li id="line_656" class="even"><span class="lineNumber">656&nbsp;</span><a name="line_656"></a></li>
+<li id="line_657" class="odd"><span class="lineNumber">657&nbsp;</span><a name="line_657"></a></li>
+<li id="line_658" class="even"><span class="lineNumber">658&nbsp;</span><a name="line_658"></a></li>
+<li id="line_659" class="odd"><span class="lineNumber">659&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;are&nbsp;escaped&nbsp;automatically&nbsp;producing&nbsp;safer&nbsp;queries.&lt;/p&gt;<a name="line_659"></a></li>
+<li id="line_660" class="even"><span class="lineNumber">660&nbsp;</span><a name="line_660"></a></li>
+<li id="line_661" class="odd"><span class="lineNumber">661&nbsp;</span>&lt;p&gt;You'll&nbsp;notice&nbsp;the&nbsp;use&nbsp;of&nbsp;the&nbsp;&lt;dfn&gt;$this-&gt;db-&gt;where()&lt;/dfn&gt;&nbsp;function,&nbsp;enabling&nbsp;you&nbsp;to&nbsp;set&nbsp;the&nbsp;WHERE&nbsp;clause.<a name="line_661"></a></li>
+<li id="line_662" class="even"><span class="lineNumber">662&nbsp;</span>You&nbsp;can&nbsp;optionally&nbsp;pass&nbsp;this&nbsp;information&nbsp;directly&nbsp;into&nbsp;the&nbsp;update&nbsp;function&nbsp;as&nbsp;a&nbsp;string:&lt;/p&gt;<a name="line_662"></a></li>
+<li id="line_663" class="odd"><span class="lineNumber">663&nbsp;</span><a name="line_663"></a></li>
+<li id="line_664" class="even"><span class="lineNumber">664&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;update('mytable',&nbsp;$data,&nbsp;"id&nbsp;=&nbsp;4");&lt;/code&gt;<a name="line_664"></a></li>
+<li id="line_665" class="odd"><span class="lineNumber">665&nbsp;</span><a name="line_665"></a></li>
+<li id="line_666" class="even"><span class="lineNumber">666&nbsp;</span>&lt;p&gt;Or&nbsp;as&nbsp;an&nbsp;array:&lt;/p&gt;<a name="line_666"></a></li>
+<li id="line_667" class="odd"><span class="lineNumber">667&nbsp;</span><a name="line_667"></a></li>
+<li id="line_668" class="even"><span class="lineNumber">668&nbsp;</span>&lt;code&gt;$this-&gt;db-&gt;update('mytable',&nbsp;$data,&nbsp;array('id'&nbsp;=&gt;&nbsp;$id));&lt;/code&gt;<a name="line_668"></a></li>
+<li id="line_669" class="odd"><span class="lineNumber">669&nbsp;</span><a name="line_669"></a></li>
+<li id="line_670" class="even"><span class="lineNumber">670&nbsp;</span>&lt;p&gt;You&nbsp;may&nbsp;also&nbsp;use&nbsp;the&nbsp;&lt;dfn&gt;$this-&gt;db-&gt;set()&lt;/dfn&gt;&nbsp;function&nbsp;described&nbsp;above&nbsp;when&nbsp;performing&nbsp;updates.&lt;/p&gt;<a name="line_670"></a></li>
+<li id="line_671" class="odd"><span class="lineNumber">671&nbsp;</span><a name="line_671"></a></li>
+<li id="line_672" class="even"><span class="lineNumber">672&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;update_batch();&lt;/h2&gt;<a name="line_672"></a></li>
+<li id="line_673" class="odd"><span class="lineNumber">673&nbsp;</span>&lt;p&gt;Generates&nbsp;an&nbsp;update&nbsp;string&nbsp;based&nbsp;on&nbsp;the&nbsp;data&nbsp;you&nbsp;supply,&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&nbsp;You&nbsp;can&nbsp;either&nbsp;pass&nbsp;an<a name="line_673"></a></li>
+<li id="line_674" class="even"><span class="lineNumber">674&nbsp;</span>&lt;strong&gt;array&lt;/strong&gt;&nbsp;or&nbsp;an&nbsp;&lt;strong&gt;object&lt;/strong&gt;&nbsp;to&nbsp;the&nbsp;function.&nbsp;&nbsp;Here&nbsp;is&nbsp;an&nbsp;example&nbsp;using&nbsp;an&nbsp;array:&lt;/p&gt;<a name="line_674"></a></li>
+<li id="line_675" class="odd"><span class="lineNumber">675&nbsp;</span><a name="line_675"></a></li>
+<li id="line_676" class="even"><span class="lineNumber">676&nbsp;</span>&lt;code&gt;<a name="line_676"></a></li>
+<li id="line_677" class="odd"><span class="lineNumber">677&nbsp;</span>$data&nbsp;=&nbsp;array(&lt;br/&gt;<a name="line_677"></a></li>
+<li id="line_678" class="even"><span class="lineNumber">678&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;array(&lt;br&nbsp;/&gt;<a name="line_678"></a></li>
+<li id="line_679" class="odd"><span class="lineNumber">679&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;'My&nbsp;title'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_679"></a></li>
+<li id="line_680" class="even"><span class="lineNumber">680&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;'My&nbsp;Name&nbsp;2'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_680"></a></li>
+<li id="line_681" class="odd"><span class="lineNumber">681&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;'My&nbsp;date&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_681"></a></li>
+<li id="line_682" class="even"><span class="lineNumber">682&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;),&lt;br&nbsp;/&gt;<a name="line_682"></a></li>
+<li id="line_683" class="odd"><span class="lineNumber">683&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;array(&lt;br&nbsp;/&gt;<a name="line_683"></a></li>
+<li id="line_684" class="even"><span class="lineNumber">684&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'title'&nbsp;=&gt;&nbsp;'Another&nbsp;title'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_684"></a></li>
+<li id="line_685" class="odd"><span class="lineNumber">685&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'name'&nbsp;=&gt;&nbsp;'Another&nbsp;Name&nbsp;2'&nbsp;,&lt;br&nbsp;/&gt;<a name="line_685"></a></li>
+<li id="line_686" class="even"><span class="lineNumber">686&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;'date'&nbsp;=&gt;&nbsp;'Another&nbsp;date&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_686"></a></li>
+<li id="line_687" class="odd"><span class="lineNumber">687&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;)&lt;br/&gt;<a name="line_687"></a></li>
+<li id="line_688" class="even"><span class="lineNumber">688&nbsp;</span>);&lt;br&nbsp;/&gt;<a name="line_688"></a></li>
+<li id="line_689" class="odd"><span class="lineNumber">689&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_689"></a></li>
+<li id="line_690" class="even"><span class="lineNumber">690&nbsp;</span>$this-&gt;db-&gt;update_batch('mytable',&nbsp;$data,&nbsp;'title');<a name="line_690"></a></li>
+<li id="line_691" class="odd"><span class="lineNumber">691&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_691"></a></li>
+<li id="line_692" class="even"><span class="lineNumber">692&nbsp;</span>//&nbsp;Produces:&nbsp;&lt;br&nbsp;/&gt;<a name="line_692"></a></li>
+<li id="line_693" class="odd"><span class="lineNumber">693&nbsp;</span>//&nbsp;UPDATE&nbsp;`mytable`&nbsp;SET&nbsp;`name`&nbsp;=&nbsp;CASE&lt;br&nbsp;/&gt;<a name="line_693"></a></li>
+<li id="line_694" class="even"><span class="lineNumber">694&nbsp;</span>//&nbsp;WHEN&nbsp;`title`&nbsp;=&nbsp;'My&nbsp;title'&nbsp;THEN&nbsp;'My&nbsp;Name&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_694"></a></li>
+<li id="line_695" class="odd"><span class="lineNumber">695&nbsp;</span>//&nbsp;WHEN&nbsp;`title`&nbsp;=&nbsp;'Another&nbsp;title'&nbsp;THEN&nbsp;'Another&nbsp;Name&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_695"></a></li>
+<li id="line_696" class="even"><span class="lineNumber">696&nbsp;</span>//&nbsp;ELSE&nbsp;`name`&nbsp;END,&lt;br&nbsp;/&gt;<a name="line_696"></a></li>
+<li id="line_697" class="odd"><span class="lineNumber">697&nbsp;</span>//&nbsp;`date`&nbsp;=&nbsp;CASE&nbsp;&lt;br&nbsp;/&gt;<a name="line_697"></a></li>
+<li id="line_698" class="even"><span class="lineNumber">698&nbsp;</span>//&nbsp;WHEN&nbsp;`title`&nbsp;=&nbsp;'My&nbsp;title'&nbsp;THEN&nbsp;'My&nbsp;date&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_698"></a></li>
+<li id="line_699" class="odd"><span class="lineNumber">699&nbsp;</span>//&nbsp;WHEN&nbsp;`title`&nbsp;=&nbsp;'Another&nbsp;title'&nbsp;THEN&nbsp;'Another&nbsp;date&nbsp;2'&lt;br&nbsp;/&gt;<a name="line_699"></a></li>
+<li id="line_700" class="even"><span class="lineNumber">700&nbsp;</span>//&nbsp;ELSE&nbsp;`date`&nbsp;END&lt;br&nbsp;/&gt;<a name="line_700"></a></li>
+<li id="line_701" class="odd"><span class="lineNumber">701&nbsp;</span>//&nbsp;WHERE&nbsp;`title`&nbsp;IN&nbsp;('My&nbsp;title','Another&nbsp;title')&lt;/code&gt;<a name="line_701"></a></li>
+<li id="line_702" class="even"><span class="lineNumber">702&nbsp;</span><a name="line_702"></a></li>
+<li id="line_703" class="odd"><span class="lineNumber">703&nbsp;</span>&lt;p&gt;The&nbsp;first&nbsp;parameter&nbsp;will&nbsp;contain&nbsp;the&nbsp;table&nbsp;name,&nbsp;the&nbsp;second&nbsp;is&nbsp;an&nbsp;associative&nbsp;array&nbsp;of&nbsp;values,&nbsp;the&nbsp;third&nbsp;parameter&nbsp;is&nbsp;the&nbsp;where&nbsp;key.&lt;/p&gt;<a name="line_703"></a></li>
+<li id="line_704" class="even"><span class="lineNumber">704&nbsp;</span><a name="line_704"></a></li>
+<li id="line_705" class="odd"><span class="lineNumber">705&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;All&nbsp;values&nbsp;are&nbsp;escaped&nbsp;automatically&nbsp;producing&nbsp;safer&nbsp;queries.&lt;/p&gt;<a name="line_705"></a></li>
+<li id="line_706" class="even"><span class="lineNumber">706&nbsp;</span><a name="line_706"></a></li>
+<li id="line_707" class="odd"><span class="lineNumber">707&nbsp;</span><a name="line_707"></a></li>
+<li id="line_708" class="even"><span class="lineNumber">708&nbsp;</span>&lt;a&nbsp;name="delete"&gt;&amp;nbsp;&lt;/a&gt;<a name="line_708"></a></li>
+<li id="line_709" class="odd"><span class="lineNumber">709&nbsp;</span>&lt;h1&gt;Deleting&nbsp;Data&lt;/h1&gt;<a name="line_709"></a></li>
+<li id="line_710" class="even"><span class="lineNumber">710&nbsp;</span><a name="line_710"></a></li>
+<li id="line_711" class="odd"><span class="lineNumber">711&nbsp;</span><a name="line_711"></a></li>
+<li id="line_712" class="even"><span class="lineNumber">712&nbsp;</span><a name="line_712"></a></li>
+<li id="line_713" class="odd"><span class="lineNumber">713&nbsp;</span>&lt;h2&gt;$this-&gt;db-&gt;delete();&lt;/h2&gt;<a name="line_713"></a></li>
+<li id="line_714" class="even"><span class="lineNumber">714&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;delete&nbsp;SQL&nbsp;string&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&lt;/p&gt;<a name="line_714"></a></li>
+<li id="line_715" class="odd"><span class="lineNumber">715&nbsp;</span><a name="line_715"></a></li>
+<li id="line_716" class="even"><span class="lineNumber">716&nbsp;</span>&lt;code&gt;<a name="line_716"></a></li>
+<li id="line_717" class="odd"><span class="lineNumber">717&nbsp;</span>$this-&gt;db-&gt;delete('mytable',&nbsp;array('id'&nbsp;=&gt;&nbsp;$id));<a name="line_717"></a></li>
+<li id="line_718" class="even"><span class="lineNumber">718&nbsp;</span>&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_718"></a></li>
+<li id="line_719" class="odd"><span class="lineNumber">719&nbsp;</span>//&nbsp;Produces:&lt;br&nbsp;/&gt;<a name="line_719"></a></li>
+<li id="line_720" class="even"><span class="lineNumber">720&nbsp;</span>//&nbsp;DELETE&nbsp;FROM&nbsp;mytable&nbsp;&lt;br&nbsp;/&gt;<a name="line_720"></a></li>
+<li id="line_721" class="odd"><span class="lineNumber">721&nbsp;</span>//&nbsp;WHERE&nbsp;id&nbsp;=&nbsp;$id&lt;/code&gt;<a name="line_721"></a></li>
+<li id="line_722" class="even"><span class="lineNumber">722&nbsp;</span><a name="line_722"></a></li>
+<li id="line_723" class="odd"><span class="lineNumber">723&nbsp;</span>&lt;p&gt;The&nbsp;first&nbsp;parameter&nbsp;is&nbsp;the&nbsp;table&nbsp;name,&nbsp;the&nbsp;second&nbsp;is&nbsp;the&nbsp;where&nbsp;clause.&nbsp;You&nbsp;can&nbsp;also&nbsp;use&nbsp;the&nbsp;&lt;dfn&gt;where()&lt;/dfn&gt;&nbsp;or&nbsp;&lt;dfn&gt;or_where()&lt;/dfn&gt;&nbsp;functions&nbsp;instead&nbsp;of&nbsp;passing<a name="line_723"></a></li>
+<li id="line_724" class="even"><span class="lineNumber">724&nbsp;</span>the&nbsp;data&nbsp;to&nbsp;the&nbsp;second&nbsp;parameter&nbsp;of&nbsp;the&nbsp;function:&lt;/p&gt;<a name="line_724"></a></li>
+<li id="line_725" class="odd"><span class="lineNumber">725&nbsp;</span><a name="line_725"></a></li>
+<li id="line_726" class="even"><span class="lineNumber">726&nbsp;</span>&lt;p&gt;&lt;code&gt;&nbsp;$this-&gt;db-&gt;where('id',&nbsp;$id);&lt;br&nbsp;/&gt;<a name="line_726"></a></li>
+<li id="line_727" class="odd"><span class="lineNumber">727&nbsp;</span>	$this-&gt;db-&gt;delete('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_727"></a></li>
+<li id="line_728" class="even"><span class="lineNumber">728&nbsp;</span>	&lt;br&nbsp;/&gt;<a name="line_728"></a></li>
+<li id="line_729" class="odd"><span class="lineNumber">729&nbsp;</span>	//&nbsp;Produces:&lt;br&nbsp;/&gt;<a name="line_729"></a></li>
+<li id="line_730" class="even"><span class="lineNumber">730&nbsp;</span>	//&nbsp;DELETE&nbsp;FROM&nbsp;mytable&nbsp;&lt;br&nbsp;/&gt;<a name="line_730"></a></li>
+<li id="line_731" class="odd"><span class="lineNumber">731&nbsp;</span>	//&nbsp;WHERE&nbsp;id&nbsp;=&nbsp;$id&lt;/code&gt;&lt;/p&gt;<a name="line_731"></a></li>
+<li id="line_732" class="even"><span class="lineNumber">732&nbsp;</span>&lt;p&gt;An&nbsp;array&nbsp;of&nbsp;table&nbsp;names&nbsp;can&nbsp;be&nbsp;passed&nbsp;into&nbsp;delete()&nbsp;if&nbsp;you&nbsp;would&nbsp;like&nbsp;to&nbsp;delete&nbsp;data&nbsp;from&nbsp;more&nbsp;than&nbsp;1&nbsp;table.&lt;/p&gt;<a name="line_732"></a></li>
+<li id="line_733" class="odd"><span class="lineNumber">733&nbsp;</span>&lt;p&gt;&lt;code&gt;$tables&nbsp;=&nbsp;array('table1',&nbsp;'table2',&nbsp;'table3');&lt;br&nbsp;/&gt;<a name="line_733"></a></li>
+<li id="line_734" class="even"><span class="lineNumber">734&nbsp;</span>$this-&amp;gt;db-&amp;gt;where('id',&nbsp;'5');&lt;br&nbsp;/&gt;<a name="line_734"></a></li>
+<li id="line_735" class="odd"><span class="lineNumber">735&nbsp;</span>$this-&amp;gt;db-&amp;gt;delete($tables);&lt;/code&gt;&lt;/p&gt;<a name="line_735"></a></li>
+<li id="line_736" class="even"><span class="lineNumber">736&nbsp;</span>&lt;p&gt;If&nbsp;you&nbsp;want&nbsp;to&nbsp;delete&nbsp;all&nbsp;data&nbsp;from&nbsp;a&nbsp;table,&nbsp;you&nbsp;can&nbsp;use&nbsp;the&nbsp;&lt;dfn&gt;truncate()&lt;/dfn&gt;&nbsp;function,&nbsp;or&nbsp;&lt;dfn&gt;empty_table()&lt;/dfn&gt;.&lt;/p&gt;<a name="line_736"></a></li>
+<li id="line_737" class="odd"><span class="lineNumber">737&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;empty_table();&lt;/h2&gt;<a name="line_737"></a></li>
+<li id="line_738" class="even"><span class="lineNumber">738&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;delete&nbsp;SQL&nbsp;string&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&lt;code&gt;	$this-&amp;gt;db-&amp;gt;empty_table('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_738"></a></li>
+<li id="line_739" class="odd"><span class="lineNumber">739&nbsp;</span>	&lt;br&nbsp;/&gt;<a name="line_739"></a></li>
+<li id="line_740" class="even"><span class="lineNumber">740&nbsp;</span>//&nbsp;Produces&lt;br&nbsp;/&gt;<a name="line_740"></a></li>
+<li id="line_741" class="odd"><span class="lineNumber">741&nbsp;</span>//&nbsp;DELETE&nbsp;FROM&nbsp;mytable&lt;/code&gt;&lt;/p&gt;<a name="line_741"></a></li>
+<li id="line_742" class="even"><span class="lineNumber">742&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;truncate();&lt;/h2&gt;<a name="line_742"></a></li>
+<li id="line_743" class="odd"><span class="lineNumber">743&nbsp;</span>&lt;p&gt;Generates&nbsp;a&nbsp;truncate&nbsp;SQL&nbsp;string&nbsp;and&nbsp;runs&nbsp;the&nbsp;query.&lt;/p&gt;<a name="line_743"></a></li>
+<li id="line_744" class="even"><span class="lineNumber">744&nbsp;</span>&lt;code&gt;&nbsp;$this-&amp;gt;db-&amp;gt;from('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_744"></a></li>
+<li id="line_745" class="odd"><span class="lineNumber">745&nbsp;</span>$this-&amp;gt;db-&amp;gt;truncate();&nbsp;&lt;br&nbsp;/&gt;<a name="line_745"></a></li>
+<li id="line_746" class="even"><span class="lineNumber">746&nbsp;</span>//&nbsp;or&nbsp;&lt;br&nbsp;/&gt;<a name="line_746"></a></li>
+<li id="line_747" class="odd"><span class="lineNumber">747&nbsp;</span>$this-&amp;gt;db-&amp;gt;truncate('mytable');&nbsp;&lt;br&nbsp;/&gt;<a name="line_747"></a></li>
+<li id="line_748" class="even"><span class="lineNumber">748&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_748"></a></li>
+<li id="line_749" class="odd"><span class="lineNumber">749&nbsp;</span>//&nbsp;Produce:&lt;br&nbsp;/&gt;<a name="line_749"></a></li>
+<li id="line_750" class="even"><span class="lineNumber">750&nbsp;</span>//&nbsp;TRUNCATE&nbsp;mytable&nbsp;&lt;br&nbsp;/&gt;<a name="line_750"></a></li>
+<li id="line_751" class="odd"><span class="lineNumber">751&nbsp;</span>&lt;/code&gt;<a name="line_751"></a></li>
+<li id="line_752" class="even"><span class="lineNumber">752&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;If&nbsp;the&nbsp;TRUNCATE&nbsp;command&nbsp;isn't&nbsp;available,&nbsp;truncate()&nbsp;will&nbsp;execute&nbsp;as&nbsp;&amp;quot;DELETE&nbsp;FROM&nbsp;table&amp;quot;.&lt;/p&gt;<a name="line_752"></a></li>
+<li id="line_753" class="odd"><span class="lineNumber">753&nbsp;</span><a name="line_753"></a></li>
+<li id="line_754" class="even"><span class="lineNumber">754&nbsp;</span>&lt;h1&gt;&lt;a&nbsp;name="chaining"&gt;&amp;nbsp;&lt;/a&gt;Method&nbsp;Chaining&lt;/h1&gt;<a name="line_754"></a></li>
+<li id="line_755" class="odd"><span class="lineNumber">755&nbsp;</span><a name="line_755"></a></li>
+<li id="line_756" class="even"><span class="lineNumber">756&nbsp;</span>&lt;p&gt;Method&nbsp;chaining&nbsp;allows&nbsp;you&nbsp;to&nbsp;simplify&nbsp;your&nbsp;syntax&nbsp;by&nbsp;connecting&nbsp;multiple&nbsp;functions.&nbsp;&nbsp;Consider&nbsp;this&nbsp;example:&lt;/p&gt;<a name="line_756"></a></li>
+<li id="line_757" class="odd"><span class="lineNumber">757&nbsp;</span><a name="line_757"></a></li>
+<li id="line_758" class="even"><span class="lineNumber">758&nbsp;</span>&lt;code&gt;<a name="line_758"></a></li>
+<li id="line_759" class="odd"><span class="lineNumber">759&nbsp;</span>&lt;dfn&gt;$this-&gt;db&lt;/dfn&gt;&lt;kbd&gt;-&gt;&lt;/kbd&gt;&lt;var&gt;select&lt;/var&gt;('title')&lt;kbd&gt;-&gt;&lt;/kbd&gt;&lt;var&gt;from&lt;/var&gt;('mytable')&lt;kbd&gt;-&gt;&lt;/kbd&gt;&lt;var&gt;where&lt;/var&gt;('id',&nbsp;$id)&lt;kbd&gt;-&gt;&lt;/kbd&gt;&lt;var&gt;limit&lt;/var&gt;(10,&nbsp;20);&lt;br&nbsp;/&gt;<a name="line_759"></a></li>
+<li id="line_760" class="even"><span class="lineNumber">760&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_760"></a></li>
+<li id="line_761" class="odd"><span class="lineNumber">761&nbsp;</span>$query&nbsp;=&nbsp;$this-&gt;db-&gt;get();&lt;/code&gt;<a name="line_761"></a></li>
+<li id="line_762" class="even"><span class="lineNumber">762&nbsp;</span><a name="line_762"></a></li>
+<li id="line_763" class="odd"><span class="lineNumber">763&nbsp;</span>&lt;p&nbsp;class="important"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;Method&nbsp;chaining&nbsp;only&nbsp;works&nbsp;with&nbsp;PHP&nbsp;5.&lt;/p&gt;<a name="line_763"></a></li>
+<li id="line_764" class="even"><span class="lineNumber">764&nbsp;</span><a name="line_764"></a></li>
+<li id="line_765" class="odd"><span class="lineNumber">765&nbsp;</span>&lt;p&gt;&amp;nbsp;&lt;/p&gt;<a name="line_765"></a></li>
+<li id="line_766" class="even"><span class="lineNumber">766&nbsp;</span><a name="line_766"></a></li>
+<li id="line_767" class="odd"><span class="lineNumber">767&nbsp;</span>&lt;h1&gt;&lt;a&nbsp;name="caching"&gt;&amp;nbsp;&lt;/a&gt;Active&nbsp;Record&nbsp;Caching&lt;/h1&gt;<a name="line_767"></a></li>
+<li id="line_768" class="even"><span class="lineNumber">768&nbsp;</span><a name="line_768"></a></li>
+<li id="line_769" class="odd"><span class="lineNumber">769&nbsp;</span>&lt;p&gt;While&nbsp;not&nbsp;&amp;quot;true&amp;quot;&nbsp;caching,&nbsp;Active&nbsp;Record&nbsp;enables&nbsp;you&nbsp;to&nbsp;save&nbsp;(or&nbsp;&amp;quot;cache&amp;quot;)&nbsp;certain&nbsp;parts&nbsp;of&nbsp;your&nbsp;queries&nbsp;for&nbsp;reuse&nbsp;at&nbsp;a&nbsp;later&nbsp;point&nbsp;in&nbsp;your&nbsp;script's&nbsp;execution.&nbsp;Normally,&nbsp;when&nbsp;an&nbsp;Active&nbsp;Record&nbsp;call&nbsp;is&nbsp;completed,&nbsp;all&nbsp;stored&nbsp;information&nbsp;is&nbsp;reset&nbsp;for&nbsp;the&nbsp;next&nbsp;call.&nbsp;With&nbsp;caching,&nbsp;you&nbsp;can&nbsp;prevent&nbsp;this&nbsp;reset,&nbsp;and&nbsp;reuse&nbsp;information&nbsp;easily.&lt;/p&gt;<a name="line_769"></a></li>
+<li id="line_770" class="even"><span class="lineNumber">770&nbsp;</span><a name="line_770"></a></li>
+<li id="line_771" class="odd"><span class="lineNumber">771&nbsp;</span>&lt;p&gt;Cached&nbsp;calls&nbsp;are&nbsp;cumulative.&nbsp;If&nbsp;you&nbsp;make&nbsp;2&nbsp;cached&nbsp;select()&nbsp;calls,&nbsp;and&nbsp;then&nbsp;2&nbsp;uncached&nbsp;select()&nbsp;calls,&nbsp;this&nbsp;will&nbsp;result&nbsp;in&nbsp;4&nbsp;select()&nbsp;calls.&nbsp;There&nbsp;are&nbsp;three&nbsp;Caching&nbsp;functions&nbsp;available:&lt;/p&gt;<a name="line_771"></a></li>
+<li id="line_772" class="even"><span class="lineNumber">772&nbsp;</span><a name="line_772"></a></li>
+<li id="line_773" class="odd"><span class="lineNumber">773&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;start_cache()&lt;/h2&gt;<a name="line_773"></a></li>
+<li id="line_774" class="even"><span class="lineNumber">774&nbsp;</span><a name="line_774"></a></li>
+<li id="line_775" class="odd"><span class="lineNumber">775&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;must&nbsp;be&nbsp;called&nbsp;to&nbsp;begin&nbsp;caching.&nbsp;All&nbsp;Active&nbsp;Record&nbsp;queries&nbsp;of&nbsp;the&nbsp;correct&nbsp;type&nbsp;(see&nbsp;below&nbsp;for&nbsp;supported&nbsp;queries)&nbsp;are&nbsp;stored&nbsp;for&nbsp;later&nbsp;use.&lt;/p&gt;<a name="line_775"></a></li>
+<li id="line_776" class="even"><span class="lineNumber">776&nbsp;</span><a name="line_776"></a></li>
+<li id="line_777" class="odd"><span class="lineNumber">777&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;stop_cache()&lt;/h2&gt;<a name="line_777"></a></li>
+<li id="line_778" class="even"><span class="lineNumber">778&nbsp;</span><a name="line_778"></a></li>
+<li id="line_779" class="odd"><span class="lineNumber">779&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;can&nbsp;be&nbsp;called&nbsp;to&nbsp;stop&nbsp;caching.&lt;/p&gt;<a name="line_779"></a></li>
+<li id="line_780" class="even"><span class="lineNumber">780&nbsp;</span><a name="line_780"></a></li>
+<li id="line_781" class="odd"><span class="lineNumber">781&nbsp;</span>&lt;h2&gt;$this-&amp;gt;db-&amp;gt;flush_cache()&lt;/h2&gt;<a name="line_781"></a></li>
+<li id="line_782" class="even"><span class="lineNumber">782&nbsp;</span><a name="line_782"></a></li>
+<li id="line_783" class="odd"><span class="lineNumber">783&nbsp;</span>&lt;p&gt;This&nbsp;function&nbsp;deletes&nbsp;all&nbsp;items&nbsp;from&nbsp;the&nbsp;Active&nbsp;Record&nbsp;cache.&lt;/p&gt;<a name="line_783"></a></li>
+<li id="line_784" class="even"><span class="lineNumber">784&nbsp;</span><a name="line_784"></a></li>
+<li id="line_785" class="odd"><span class="lineNumber">785&nbsp;</span>&lt;p&gt;Here's&nbsp;a&nbsp;usage&nbsp;example:&lt;/p&gt;<a name="line_785"></a></li>
+<li id="line_786" class="even"><span class="lineNumber">786&nbsp;</span><a name="line_786"></a></li>
+<li id="line_787" class="odd"><span class="lineNumber">787&nbsp;</span>&lt;p&gt;&lt;code&gt;$this-&amp;gt;db-&amp;gt;start_cache();&lt;br&nbsp;/&gt;<a name="line_787"></a></li>
+<li id="line_788" class="even"><span class="lineNumber">788&nbsp;</span>$this-&amp;gt;db-&amp;gt;select('field1');&lt;br&nbsp;/&gt;<a name="line_788"></a></li>
+<li id="line_789" class="odd"><span class="lineNumber">789&nbsp;</span>$this-&amp;gt;db-&amp;gt;stop_cache();&lt;br&nbsp;/&gt;&lt;br&nbsp;/&gt;<a name="line_789"></a></li>
+<li id="line_790" class="even"><span class="lineNumber">790&nbsp;</span>$this-&amp;gt;db-&amp;gt;get('tablename');&lt;br&nbsp;/&gt;<a name="line_790"></a></li>
+<li id="line_791" class="odd"><span class="lineNumber">791&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_791"></a></li>
+<li id="line_792" class="even"><span class="lineNumber">792&nbsp;</span>//Generates:&nbsp;SELECT&nbsp;`field1`&nbsp;FROM&nbsp;(`tablename`)&lt;br&nbsp;/&gt;<a name="line_792"></a></li>
+<li id="line_793" class="odd"><span class="lineNumber">793&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_793"></a></li>
+<li id="line_794" class="even"><span class="lineNumber">794&nbsp;</span>$this-&amp;gt;db-&amp;gt;select('field2');&lt;br&nbsp;/&gt;<a name="line_794"></a></li>
+<li id="line_795" class="odd"><span class="lineNumber">795&nbsp;</span>$this-&amp;gt;db-&amp;gt;get('tablename');&lt;br&nbsp;/&gt;<a name="line_795"></a></li>
+<li id="line_796" class="even"><span class="lineNumber">796&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_796"></a></li>
+<li id="line_797" class="odd"><span class="lineNumber">797&nbsp;</span>//Generates:&nbsp;&nbsp;SELECT&nbsp;`field1`,&nbsp;`field2`&nbsp;FROM&nbsp;(`tablename`)&lt;br&nbsp;/&gt;<a name="line_797"></a></li>
+<li id="line_798" class="even"><span class="lineNumber">798&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_798"></a></li>
+<li id="line_799" class="odd"><span class="lineNumber">799&nbsp;</span>$this-&amp;gt;db-&amp;gt;flush_cache();&lt;br&nbsp;/&gt;<a name="line_799"></a></li>
+<li id="line_800" class="even"><span class="lineNumber">800&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_800"></a></li>
+<li id="line_801" class="odd"><span class="lineNumber">801&nbsp;</span>$this-&amp;gt;db-&amp;gt;select('field2');&lt;br&nbsp;/&gt;<a name="line_801"></a></li>
+<li id="line_802" class="even"><span class="lineNumber">802&nbsp;</span>$this-&amp;gt;db-&amp;gt;get('tablename');&lt;br&nbsp;/&gt;<a name="line_802"></a></li>
+<li id="line_803" class="odd"><span class="lineNumber">803&nbsp;</span>&lt;br&nbsp;/&gt;<a name="line_803"></a></li>
+<li id="line_804" class="even"><span class="lineNumber">804&nbsp;</span>//Generates:&nbsp;&nbsp;SELECT&nbsp;`field2`&nbsp;FROM&nbsp;(`tablename`)&lt;/code&gt;&lt;/p&gt;<a name="line_804"></a></li>
+<li id="line_805" class="odd"><span class="lineNumber">805&nbsp;</span><a name="line_805"></a></li>
+<li id="line_806" class="even"><span class="lineNumber">806&nbsp;</span>&lt;p&nbsp;class="important"&gt;&nbsp;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;The&nbsp;following&nbsp;statements&nbsp;can&nbsp;be&nbsp;cached:&nbsp;select,&nbsp;from,&nbsp;join,&nbsp;where,&nbsp;like,&nbsp;group_by,&nbsp;having,&nbsp;order_by,&nbsp;set&lt;/p&gt;<a name="line_806"></a></li>
+<li id="line_807" class="odd"><span class="lineNumber">807&nbsp;</span>&lt;p&gt;&amp;nbsp;&lt;/p&gt;<a name="line_807"></a></li>
+<li id="line_808" class="even"><span class="lineNumber">808&nbsp;</span>&lt;/div&gt;<a name="line_808"></a></li>
+<li id="line_809" class="odd"><span class="lineNumber">809&nbsp;</span>&lt;!--&nbsp;END&nbsp;CONTENT&nbsp;--&gt;<a name="line_809"></a></li>
+<li id="line_810" class="even"><span class="lineNumber">810&nbsp;</span><a name="line_810"></a></li>
+<li id="line_811" class="odd"><span class="lineNumber">811&nbsp;</span><a name="line_811"></a></li>
+<li id="line_812" class="even"><span class="lineNumber">812&nbsp;</span>&lt;div&nbsp;id="footer"&gt;<a name="line_812"></a></li>
+<li id="line_813" class="odd"><span class="lineNumber">813&nbsp;</span>&lt;p&gt;<a name="line_813"></a></li>
+<li id="line_814" class="even"><span class="lineNumber">814&nbsp;</span>Previous&nbsp;Topic:&amp;nbsp;&amp;nbsp;&lt;a&nbsp;href="helpers.html"&gt;Query&nbsp;Helper&nbsp;Functions&lt;/a&gt;<a name="line_814"></a></li>
+<li id="line_815" class="odd"><span class="lineNumber">815&nbsp;</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;middot;&amp;nbsp;&amp;nbsp;<a name="line_815"></a></li>
+<li id="line_816" class="even"><span class="lineNumber">816&nbsp;</span>&lt;a&nbsp;href="#top"&gt;Top&nbsp;of&nbsp;Page&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;middot;&amp;nbsp;&amp;nbsp;<a name="line_816"></a></li>
+<li id="line_817" class="odd"><span class="lineNumber">817&nbsp;</span>&lt;a&nbsp;href="../index.html"&gt;User&nbsp;Guide&nbsp;Home&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;middot;&amp;nbsp;&amp;nbsp;<a name="line_817"></a></li>
+<li id="line_818" class="even"><span class="lineNumber">818&nbsp;</span>Next&nbsp;Topic:&amp;nbsp;&amp;nbsp;&lt;a&nbsp;href="transactions.html"&gt;Transactions&lt;/a&gt;<a name="line_818"></a></li>
+<li id="line_819" class="odd"><span class="lineNumber">819&nbsp;</span>&lt;/p&gt;<a name="line_819"></a></li>
+<li id="line_820" class="even"><span class="lineNumber">820&nbsp;</span>&lt;p&gt;&lt;a&nbsp;href="http://codeigniter.com"&gt;CodeIgniter&lt;/a&gt;&nbsp;&amp;nbsp;&amp;middot;&amp;nbsp;&nbsp;Copyright&nbsp;&amp;#169;&nbsp;2006&nbsp;-&nbsp;2012&nbsp;&amp;nbsp;&amp;middot;&amp;nbsp;&nbsp;&lt;a&nbsp;href="http://ellislab.com/"&gt;EllisLab,&nbsp;Inc.&lt;/a&gt;&lt;/p&gt;<a name="line_820"></a></li>
+<li id="line_821" class="odd"><span class="lineNumber">821&nbsp;</span>&lt;/div&gt;<a name="line_821"></a></li>
+<li id="line_822" class="even"><span class="lineNumber">822&nbsp;</span><a name="line_822"></a></li>
+<li id="line_823" class="odd"><span class="lineNumber">823&nbsp;</span>&lt;/body&gt;<a name="line_823"></a></li>
+<li id="line_824" class="even"><span class="lineNumber">824&nbsp;</span>&lt;/html&gt;<a name="line_824"></a></li></ol></div></body></html>
+                    </div>
+    </body>
+</html>
